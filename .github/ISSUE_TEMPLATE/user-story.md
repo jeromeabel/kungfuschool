@@ -19,5 +19,5 @@ assignees: jeromeabel
 - **Alors**
 
 ## Tâches
-- []
-- []
+- [ ]
+- [ ]
