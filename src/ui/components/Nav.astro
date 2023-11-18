@@ -14,7 +14,7 @@ const CTA = { label: "Nous contacter", href: `${baseURL}/contact` }
 ---
 
 <nav class="container py-8">
-    <ul class="flex gap-8">
+    <ul class="flex gap-8 justify-end">
         { menu.map( ({label, href}) => <li><NavLink {label} {href} /></li>)}
         <li><CTASecondary label={CTA.label} href={CTA.href}/></li>
     </ul>
