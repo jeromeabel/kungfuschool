@@ -2,7 +2,7 @@
 import type { HTMLAttributes } from 'astro/types';
 
 interface Props extends HTMLAttributes<'a'> {
-  label: string;
+	label: string;
 }
 
 const { href, label, ...props } = Astro.props;
@@ -13,11 +13,11 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 ---
 
 <a
-  href={href}
-  class:list={['text-xl border-white hover:border-b', { 'border-b': isActive }]}
-  {...props}
-  aria-label={`${label} page`}
-  title={`${label} page`}
+	href={href}
+	class:list={['border-white text-xl hover:border-b', { 'border-b': isActive }]}
+	{...props}
+	aria-label={`${label} page`}
+	title={`${label} page`}
 >
-  {label}
+	{label}
 </a>

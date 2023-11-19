@@ -1,17 +1,17 @@
 ---
 export interface Props {
-  label?: string;
-  href?: string;
+	label?: string;
+	href?: string;
 }
 
 const { label, href } = Astro.props;
 ---
 
 <a
-  class='bg-white text-black rounded-full py-2 px-6 text-lg hover:bg-black hover:text-white border-white border transition-all'
-  href={href}
-  aria-label={`${label} page`}
-  title={`${label} page`}
+	class="rounded-full border border-white bg-white px-6 py-2 text-lg text-black transition-all hover:bg-black hover:text-white"
+	href={href}
+	aria-label={`${label} page`}
+	title={`${label} page`}
 >
-  {label}
+	{label}
 </a>
