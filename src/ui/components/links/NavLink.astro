@@ -14,10 +14,7 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 
 <a
   href={href}
-  class:list={[
-    'text-xl',
-    { 'border-white border-b': isActive },
-  ]}
+  class:list={['text-xl border-white hover:border-b', { 'border-b': isActive }]}
   {...props}
   aria-label={`${label} page`}
   title={`${label} page`}
