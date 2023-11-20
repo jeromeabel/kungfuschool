@@ -3,23 +3,24 @@ import NavLink from '@components/links/NavLink.astro';
 import CTASecondary from '@components/links/CTASecondary.astro';
 
 const baseURL = import.meta.env.BASE_URL;
+
 const menu: { label: string; href: string }[] = [
-  { label: 'Home', href: `${baseURL}` },
-  { label: 'École', href: `${baseURL}/ecole` },
-  { label: 'Cours', href: `${baseURL}/cours` },
+	{ label: 'Home', href: `${baseURL}` },
+	{ label: 'École', href: `${baseURL}/ecole` },
+	{ label: 'Cours', href: `${baseURL}/cours` },
 ];
 const CTA = { label: 'Nous contacter', href: `${baseURL}/contact` };
 ---
 
-<nav class='container py-8'>
-  <ul class='flex gap-8 justify-end'>
-    {
-      menu.map(({ label, href }) => (
-        <li>
-          <NavLink {label} {href} />
-        </li>
-      ))
-    }
-    <li><CTASecondary label={CTA.label} href={CTA.href} /></li>
-  </ul>
+<nav class="container py-8">
+	<ul class="flex justify-end gap-8">
+		{
+			menu.map(({ label, href }) => (
+				<li>
+					<NavLink {label} {href} />
+				</li>
+			))
+		}
+		<li><CTASecondary label={CTA.label} href={CTA.href} /></li>
+	</ul>
 </nav>

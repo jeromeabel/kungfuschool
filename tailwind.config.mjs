@@ -6,7 +6,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				title: ['shanghai', ...defaultTheme.fontFamily.serif],
+				title: ['Shanghai', ...defaultTheme.fontFamily.serif],
 			},
 			colors: {
 				black: '#151515',

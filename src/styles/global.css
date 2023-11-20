@@ -30,14 +30,4 @@
 	h6 {
 		@apply text-lg;
 	}
-
-	@font-face {
-		font-family: 'shanghai';
-		src:
-			url('/fonts/shanghai.woff2') format('woff2'),
-			url('/fonts/shanghai.woff') format('woff');
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
 }
