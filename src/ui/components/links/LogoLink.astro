@@ -1,0 +1,14 @@
+---
+import { Icon } from 'astro-icon';
+
+const baseURL = import.meta.env.BASE_URL;
+---
+
+<a
+	href={baseURL}
+	aria-label="Home page"
+	title="Home page"
+	class="bg-gold rounded-full p-1 hover:bg-white"
+>
+	<Icon name="logo" size={48} />
+</a>

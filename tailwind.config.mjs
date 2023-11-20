@@ -11,6 +11,7 @@ export default {
 			colors: {
 				black: '#151515',
 				white: '#fdfdfd',
+				gold: '#eaff00',
 			},
 			container: {
 				center: true,
