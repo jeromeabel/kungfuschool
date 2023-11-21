@@ -1,7 +1,11 @@
 ---
-
+import SocialLinks from '@components/links/SocialLinks.astro';
+import SiteMap from '@components/SiteMap.astro';
 ---
 
 <footer class="border-t py-8">
-	<div class="container">Footer</div>
+	<div class="container flex">
+		<SocialLinks />
+		<SiteMap />
+	</div>
 </footer>
