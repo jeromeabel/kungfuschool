@@ -1,15 +1,16 @@
 ---
 import SocialLinks from '@components/links/SocialLinks.astro';
 import SchoolInfos from '@components/SchoolInfos.astro';
-// import SiteMap from '@components/SiteMap.astro';
+import SiteMap from '@components/SiteMap.astro';
 
 // const pages = await Astro.glob('../../pages/*');
 // console.log(pages);
 ---
 
 <footer class="border-t py-12">
-	<div class="container flex gap-8">
+	<div class="container flex gap-8 justify-between">
 		<SocialLinks />
 		<SchoolInfos />
+		<SiteMap />
 	</div>
 </footer>
