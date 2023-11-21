@@ -1,0 +1,26 @@
+---
+export interface Props {
+	label: string;
+	href: string;
+	outline?: boolean;
+	rounded?: boolean;
+}
+
+const { label, href, outline = false, rounded = false } = Astro.props;
+
+const css = outline
+	? 'bg-black text-white hover:bg-white hover:text-black'
+	: 'bg-white text-black hover:bg-black hover:text-white';
+---
+
+<a
+	class:list={[
+		{ 'rounded-full': rounded },
+		`border border-white px-6 py-2 text-lg transition-all ${css}`,
+	]}
+	href={href}
+	aria-label={`${label} page`}
+	title={`${label} page`}
+>
+	{label}
+</a>

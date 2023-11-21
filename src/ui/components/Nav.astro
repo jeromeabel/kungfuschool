@@ -1,6 +1,6 @@
 ---
 import NavLink from '@components/links/NavLink.astro';
-import CTASecondary from '@components/links/CTASecondary.astro';
+import CTALink from '@components/links/CTALink.astro';
 
 const baseURL = import.meta.env.BASE_URL;
 
@@ -21,6 +21,6 @@ const CTA = { label: 'Nous contacter', href: `${baseURL}/contact` };
 				</li>
 			))
 		}
-		<li><CTASecondary label={CTA.label} href={CTA.href} /></li>
+		<li><CTALink label={CTA.label} href={CTA.href} rounded /></li>
 	</ul>
 </nav>
