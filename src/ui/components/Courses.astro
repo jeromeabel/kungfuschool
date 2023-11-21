@@ -1,0 +1,39 @@
+---
+import CourseCard from '@components/CourseCard.astro';
+
+import imgKungFuUrl from '../../content/course/kungfu/kungfu.svg';
+import imgTaiChiUrl from '../../content/course/taichi/taichi.svg';
+import imgBoxeUrl from '../../content/course/combat/combat.svg';
+
+const courses = [
+	{
+		title1: `Tai-Chi`,
+		title2: `& Qi-Cong`,
+		imageUrl: imgTaiChiUrl,
+		description:
+			'Art martial Chinois interne tiré du Kung Fu. Né au 14 ème siècle pendant la dynastie Ming et remanié pendant la révolution culturelle, il est également un art de santé.',
+	},
+	{
+		title1: 'Kung Fu',
+		title2: '& Shaolin Kids',
+		imageUrl: imgKungFuUrl,
+		description:
+			'Le Kung Fu Wushu est né en Chine il y a plus de 4000 ans. Il est le père des Arts Martiaux. Il existe plus de 1500 styles différents, le nôtre s’appelle le Shi Dong Wu.',
+	},
+	{
+		title1: 'Boxe chinoise',
+		title2: '& Physique',
+		imageUrl: imgBoxeUrl,
+		description:
+			'Le Kung Fu Wushu est né en Chine il y a plus de 4000 ans. Il est le père des Arts Martiaux. Il existe plus de 1500 styles différents, le nôtre s’appelle le Shi Dong Wu.',
+	},
+];
+---
+
+<section class="flex py-8">
+	{
+		courses.map(({ title1, title2, imageUrl, description }) => (
+			<CourseCard {title1} {title2} {imageUrl} {description} />
+		))
+	}
+</section>
