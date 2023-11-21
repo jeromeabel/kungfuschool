@@ -1,0 +1,30 @@
+---
+import { getEntry } from 'astro:content'
+const { data } = await getEntry("school", "dragontigre");
+---
+
+<div class="flex flex-col gap-4">
+	<div>
+		<span class="font-bold">ADRESSE</span>
+		<address class="not-italic">
+			{data.name}<br />
+			{data.address.street}<br />
+			{data.address.city}
+		</address>
+	</div>
+
+	<div>
+		<span class="font-bold">HORAIRES</span>
+		<p>{data.schedules}</p>
+	</div>
+
+	<div>
+		<span class="font-bold">TÉLÉPHONE</span>
+		<p>{data.telephone}</p>
+	</div>
+
+	<div>
+		<span class="font-bold">EMAIL</span>
+		<p><a href=`mailto:${data.email}` title="Envoyer un email">{data.email}</a></p>
+	</div>
+</div>

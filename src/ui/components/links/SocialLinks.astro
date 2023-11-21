@@ -1,17 +1,12 @@
 ---
+import { getEntry } from 'astro:content'
+
 import IconLink from '@components/links/IconLink.astro';
 
-const socials: { label: string; href: string; icon: string }[] = [
-	{ label: 'Facebook', href: `https://www.facebook.com/edtkft/`, icon: 'fa:facebook-f' },
-	{
-		label: 'Youtube',
-		href: `https://www.youtube.com/@icmaecoledragontigre6443`,
-		icon: 'fe:youtube',
-	},
-	{ label: 'Email', href: `mailto:icmaedt@gmail.com`, icon: 'ic:baseline-email' },
-];
+const { data } = await getEntry("school", "dragontigre");
+
 ---
 
-<div class="flex gap-2">
-	{socials.map(({ label, href, icon }) => <IconLink {label} {href} {icon} />)}
+<div class="flex items-start gap-2">
+	{data.socials.map(({ label, href, icon }) => <IconLink {label} {href} {icon} />)}
 </div>
