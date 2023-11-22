@@ -1,12 +1,15 @@
 ---
+import Icon from 'astro-icon';
+
 export interface Props {
 	label: string;
 	href: string;
 	outline?: boolean;
 	rounded?: boolean;
+	icon?: string;
 }
 
-const { label, href, outline = false, rounded = false } = Astro.props;
+const { label, href, outline = false, rounded = false, icon } = Astro.props;
 
 const css = outline
 	? 'bg-black text-white hover:bg-white hover:text-black'
@@ -16,11 +19,12 @@ const css = outline
 <a
 	class:list={[
 		{ 'rounded-full': rounded },
-		`border border-white px-6 py-2 text-lg transition-all ${css}`,
+		`flex max-w-max items-center gap-2 border border-white px-6 py-2 text-lg transition-all ${css}`,
 	]}
 	href={href}
 	aria-label={`${label} page`}
 	title={`${label} page`}
 >
-	{label}
+	<p>{label}</p>
+	{icon ? <Icon size={24} name={icon} class="" /> : null}
 </a>
