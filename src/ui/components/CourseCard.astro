@@ -1,29 +1,22 @@
 ---
-import type { ImageMetadata } from 'astro';
-import { getImage, Image } from 'astro:assets';
-
-//<img src={rocket.src} width={rocket.width} height={rocket.height} alt="A rocketship in space." />
+import Svg from '@jasikpark/astro-svg-loader';
 
 export interface Props {
 	title1: string;
 	title2: string;
 	description: string;
-	imageUrl: string | ImageMetadata;
+	svgUrl: string;
 }
 
-const { title1, title2, description, imageUrl } = Astro.props;
-
-const img = await getImage({
-	src: imageUrl,
-});
+const { title1, title2, description, svgUrl } = Astro.props;
 ---
 
 <a
-	class="flex flex-col gap-8 border border-black bg-white p-16 text-black hover:bg-black hover:fill-white hover:text-white"
+	class="flex flex-col gap-8 border border-white bg-white fill-black p-16 text-black hover:bg-black hover:fill-white hover:text-white"
 	href="/"
 >
-	<div class="flex h-52 justify-center">
-		<Image src={img.src} alt=`Illustration du cours ${title1} ${title2}` width={350} height={350} />
+	<div class="h-52 overflow-hidden">
+		<Svg src={import(`${svgUrl}?raw`)} aria-label="" class="stroke-4 h-full w-full" />
 	</div>
 	<div>
 		<h2 class="mb-4 text-center">{title1} <br />{title2}</h2>
