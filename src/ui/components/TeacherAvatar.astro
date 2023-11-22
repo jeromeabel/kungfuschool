@@ -1,0 +1,22 @@
+---
+import type { ImageMetadata } from 'astro';
+import { getImage, Image } from 'astro:assets';
+
+export interface Props {
+	name: string;
+	href: string;
+	imageUrl: string | ImageMetadata;
+}
+
+const { name, href, imageUrl } = Astro.props;
+
+// const img = await getImage({
+// 	src: imageUrl,
+// });
+---
+
+<a href={href} class="">
+	<Image src={imageUrl} alt="eee" title="eeeeee" />
+	<p>{imageUrl}</p>
+	<p>{name}</p>
+</a>

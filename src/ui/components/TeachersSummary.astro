@@ -1,0 +1,50 @@
+---
+import CTALink from '@components/links/CTALink.astro';
+import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+
+const teachers = await getCollection('teacher');
+//						imageUrl={`../../content/teacher/${teacher.slug}/${teacher.data?.avatar}`}
+/*
+
+					<TeacherAvatar
+						name={`${teacher.data?.first} ${teacher.data?.last}`}
+						imageUrl={teacher.data?.avatar}
+						href={teacher.slug}
+					/>
+*/
+---
+
+<section class="my-16">
+	<h2>Un enseignement de qualité</h2>
+	<p>La devise de l'école: "<em>Combats avec courage et conviction.</em>"</p>
+
+	<div class="my-8 grid grid-cols-3 gap-8">
+		<div class="col-span-2 flex items-center justify-evenly gap-8">
+			{
+				teachers.map((teacher) => (
+					<a href={teacher.slug} class="group flex flex-col items-center gap-2">
+						<div class="h-48 w-48  overflow-hidden rounded-full border-4 border-gold group-hover:border-white">
+							<Image src={teacher.data?.avatar} alt={teacher.data?.first} class=" object-cover " />
+						</div>
+						<p class="text-lg font-bold">{`${teacher.data.first} ${teacher.data.last}`}</p>
+					</a>
+				))
+			}
+		</div>
+		<div class="text-lg">
+			<p>
+				Les cours sont assurés par les maîtres Hrod Romero (Shifu) et Shasha Romero (Simu), assistés
+				par l’institutrice Shaman Romero (Laoshi).
+			</p>
+			<p class="my-4">
+				Les trois enseignants sont de multiples champions internationaux. Ils perpétuent un savoir
+				millénaire et sont reconnus officiellement quatrième et cinquième génération du Bu Di Zhen
+				Kung Fu et Taïji.
+			</p>
+			<p>L’enseignement s’adapte à chacun et est accessible à tous les âges de 7 à 117 ans !</p>
+		</div>
+	</div>
+
+	<CTALink href="/ecole/enseignants" label="En savoir plus" icon="carbon:arrow-right" outline />
+</section>
