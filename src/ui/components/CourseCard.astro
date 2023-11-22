@@ -9,6 +9,11 @@ export interface Props {
 }
 
 const { title1, title2, description, svgUrl } = Astro.props;
+
+/*
+The above dynamic import cannot be analyzed by Vite.
+See https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#limitations for supported dynamic import formats. If this is intended to be left as-is, you can use the  comment inside the import() call to suppress this warning.
+*/
 ---
 
 <a
@@ -16,7 +21,11 @@ const { title1, title2, description, svgUrl } = Astro.props;
 	href="/"
 >
 	<div class="h-52 overflow-hidden">
-		<Svg src={import(`${svgUrl}?raw`)} aria-label="" class="stroke-4 h-full w-full" />
+		<Svg
+			src={import(/* @vite-ignore */ `${svgUrl}?raw`)}
+			aria-label=""
+			class="stroke-4 h-full w-full"
+		/>
 	</div>
 	<div>
 		<h2 class="mb-4 text-center">{title1} <br />{title2}</h2>
