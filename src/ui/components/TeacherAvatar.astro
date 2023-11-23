@@ -1,0 +1,20 @@
+---
+import { Image } from 'astro:assets';
+
+// import type { ImageMetadata } from 'astro';
+
+// export interface Props {
+// 	name: string;
+// 	href: string;
+// 	image: string | ImageMetadata;
+// }
+
+const { name, href, image } = Astro.props;
+---
+
+<a href={href} class="group flex flex-col items-center gap-2">
+	<div class="h-48 w-48 overflow-hidden rounded-full border-4 border-gold group-hover:border-white">
+		<Image src={image} alt={`Portrait de ${name}`} class="object-cover" />
+	</div>
+	<p class="text-lg font-bold">{name}</p>
+</a>

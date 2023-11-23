@@ -1,18 +1,10 @@
 ---
-import CTALink from '@components/links/CTALink.astro';
 import { getCollection } from 'astro:content';
-import { Image } from 'astro:assets';
+
+import CTALink from '@components/links/CTALink.astro';
+import TeacherAvatar from '@components/TeacherAvatar.astro';
 
 const teachers = await getCollection('teacher');
-//						imageUrl={`../../content/teacher/${teacher.slug}/${teacher.data?.avatar}`}
-/*
-
-					<TeacherAvatar
-						name={`${teacher.data?.first} ${teacher.data?.last}`}
-						imageUrl={teacher.data?.avatar}
-						href={teacher.slug}
-					/>
-*/
 ---
 
 <section class="my-16">
@@ -22,13 +14,8 @@ const teachers = await getCollection('teacher');
 	<div class="my-8 grid grid-cols-3 gap-8">
 		<div class="col-span-2 flex items-center justify-evenly gap-8">
 			{
-				teachers.map((teacher) => (
-					<a href={teacher.slug} class="group flex flex-col items-center gap-2">
-						<div class="h-48 w-48  overflow-hidden rounded-full border-4 border-gold group-hover:border-white">
-							<Image src={teacher.data?.avatar} alt={teacher.data?.first} class=" object-cover " />
-						</div>
-						<p class="text-lg font-bold">{`${teacher.data.first} ${teacher.data.last}`}</p>
-					</a>
+				teachers.map(({ data, slug }) => (
+					<TeacherAvatar image={data.avatar} name={`${data.first} ${data.last}`} href={slug} />
 				))
 			}
 		</div>

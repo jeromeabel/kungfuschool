@@ -1,31 +1,21 @@
 ---
-import Svg from '@jasikpark/astro-svg-loader';
-
+import { Icon } from 'astro-icon';
 export interface Props {
 	title1: string;
 	title2: string;
 	description: string;
-	svgUrl: string;
+	icon: string;
 }
 
-const { title1, title2, description, svgUrl } = Astro.props;
-
-/*
-The above dynamic import cannot be analyzed by Vite.
-See https://github.com/rollup/plugins/tree/master/packages/dynamic-import-vars#limitations for supported dynamic import formats. If this is intended to be left as-is, you can use the  comment inside the import() call to suppress this warning.
-*/
+const { title1, title2, description, icon } = Astro.props;
 ---
 
 <a
 	class="flex flex-col gap-8 border border-white bg-white fill-black p-16 text-black hover:bg-black hover:fill-white hover:text-white"
 	href="/"
 >
-	<div class="h-52 overflow-hidden">
-		<Svg
-			src={import(/* @vite-ignore */ `${svgUrl}?raw`)}
-			aria-label=""
-			class="stroke-4 h-full w-full"
-		/>
+	<div class="w-30 h-52 overflow-hidden">
+		<Icon name={icon} class="h-full w-full" />
 	</div>
 	<div>
 		<h2 class="mb-4 text-center">{title1} <br />{title2}</h2>
