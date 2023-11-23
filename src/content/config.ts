@@ -58,8 +58,21 @@ const teachersCollection = defineCollection({
 		}),
 });
 
+const studentsCollection = defineCollection({
+	type: 'data',
+	schema: ({ image }) =>
+		z.object({
+			first: z.string(),
+			last: z.string(),
+			avatar: image(),
+			testimonial: z.string(),
+			yearOfPractice: z.number(),
+		}),
+});
+
 export const collections = {
 	school: schoolCollection,
 	course: coursesCollection,
 	teacher: teachersCollection,
+	student: studentsCollection,
 };
