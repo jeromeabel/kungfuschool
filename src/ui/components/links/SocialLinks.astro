@@ -1,12 +1,14 @@
 ---
-import { getEntry } from 'astro:content'
+import { getEntry } from 'astro:content';
 
 import IconLink from '@components/links/IconLink.astro';
 
-const { data } = await getEntry("school", "dragontigre");
-
+const { data } = await getEntry('school', 'dragontigre');
 ---
 
-<div class="flex items-start gap-2">
-	{data.socials.map(({ label, href, icon }) => <IconLink {label} {href} {icon} />)}
+<div>
+	<span class="mb-2 block font-bold uppercase">Nous suivre</span>
+	<div class="flex items-start gap-2">
+		{data.socials.map(({ label, href, icon }) => <IconLink {label} {href} {icon} />)}
+	</div>
 </div>
