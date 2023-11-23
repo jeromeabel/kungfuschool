@@ -1,12 +1,17 @@
 ---
 import Layout from '@layouts/Layout.astro';
+import Container from '@components/Container.astro';
 import Hero from '@components/Hero.astro';
 import CoursesSummary from '@components/CoursesSummary.astro';
 import TeachersSummary from '@components/TeachersSummary.astro';
+import SchoolInfosSummary from '@components/SchoolInfosSummary.astro';
 ---
 
 <Layout>
-	<Hero />
-	<CoursesSummary />
-	<TeachersSummary />
+	<Container>
+		<Hero />
+		<CoursesSummary />
+		<TeachersSummary />
+	</Container>
+	<SchoolInfosSummary />
 </Layout>
