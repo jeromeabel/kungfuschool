@@ -1,0 +1,32 @@
+---
+import { getEntry } from 'astro:content';
+import Container from '@components/Container.astro';
+
+const { data } = await getEntry('school', 'dragontigre');
+---
+
+<section class="border-b border-t border-white py-16">
+	<Container>
+		<h2 class="uppercase">L'École en quelques chiffres</h2>
+		<div class="my-16 flex justify-evenly gap-16">
+			<div class="text-center">
+				<h3 class="mb-4">Depuis</h3><span class="text-6xl font-bold"
+					>{data.infos.date.getFullYear()}</span
+				>
+			</div>
+			<div class="text-center">
+				<h3 class="mb-4">Élèves</h3><span class="text-6xl font-bold"
+					>{data.infos.studentsPerYear} / an</span
+				>
+			</div>
+			<div class="text-center">
+				<h3 class="mb-4">Médailles</h3><span class="text-6xl font-bold">{data.infos.medals}</span>
+			</div>
+			<div class="text-center">
+				<h3 class="mb-4">Salle</h3><span class="text-6xl font-bold"
+					>{data.infos.surface} m<sup>2</sup></span
+				>
+			</div>
+		</div>
+	</Container>
+</section>
