@@ -1,0 +1,25 @@
+---
+import Container from '@components/Container.astro';
+import TestimonialCard from './TestimonialCard.astro';
+import { getCollection } from 'astro:content';
+
+const students = await getCollection('student');
+---
+
+<section class="py-16">
+	<Container>
+		<h2 class="uppercase">Témoignages</h2>
+		<div class="flex justify-between py-16">
+			{
+				students.map(({ data }) => (
+					<TestimonialCard
+						image={data.avatar}
+						name={data.first}
+						year={data.yearOfPractice}
+						text={data.testimonial}
+					/>
+				))
+			}
+		</div>
+	</Container>
+</section>
