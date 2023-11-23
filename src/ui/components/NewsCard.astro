@@ -1,0 +1,14 @@
+---
+import { Image } from 'astro:assets';
+const { data, slug } = Astro.props;
+---
+
+<a href={slug}>
+	<article class="flex h-96 flex-col gap-4">
+		<Image src={data.cover} alt={data.title} class="h-full object-cover object-top" />
+		<div>
+			<h4 class="font-bold">{data.title}</h4>
+			<p>{data.headline}</p>
+		</div>
+	</article>
+</a>
