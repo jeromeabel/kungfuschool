@@ -1,11 +1,13 @@
 ---
+
+import { Image } from 'astro:assets';
+import { getEntry } from 'astro:content';
+import { Icon } from 'astro-icon';
+
 import Container from '@components/Container.astro';
 import SchoolInfos from '@components/SchoolInfos.astro';
 import Layout from '@layouts/Layout.astro';
 import SocialLinks from '@components/links/SocialLinks.astro';
-import { Image } from 'astro:assets';
-import { getEntry } from 'astro:content';
-import { Icon } from 'astro-icon';
 
 const { data: school } = await getEntry('school', 'dragontigre');
 ---
