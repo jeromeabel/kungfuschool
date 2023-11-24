@@ -1,7 +1,50 @@
 ---
+import Container from '@components/Container.astro';
+import SchoolInfos from '@components/SchoolInfos.astro';
 import Layout from '@layouts/Layout.astro';
+import SocialLinks from '@components/links/SocialLinks.astro';
+import { Image } from 'astro:assets';
+import { getEntry } from 'astro:content';
+import { Icon } from 'astro-icon';
+
+const { data: school } = await getEntry('school', 'dragontigre');
 ---
 
 <Layout>
-  <h1>Page École</h1>
+	<Container>
+		<h1 class="mb-8 mt-12 text-7xl">L'École</h1>
+		<div class="mb-16 flex w-2/3 gap-12">
+			<p>
+				Lorem ipsum, dolor sit amet consectetur adipisicing elit. Iusto minus odio recusandae quas,
+				assumenda natus magni, reprehenderit quidem optio sequi, molestiae repellendus voluptas eum!
+				Natus necessitatibus quasi corporis vel modi.
+			</p>
+			<p>
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Iste fugiat modi asperiores eaque
+				doloribus nesciunt? Unde consectetur vero exercitationem fugiat totam, corrupti soluta,
+				aliquam at error maxime, libero dolorem earum?
+			</p>
+		</div>
+		<Image
+			src={school.cover}
+			class="h-[750px] object-cover"
+			alt="Entrée de l'école boulevard Guiton à La Rochelle"
+		/>
+
+		<section class="py-28">
+			<h2 class="font-bold uppercase">Informations pratiques</h2>
+			<div class="grid grid-cols-2 gap-24 py-16">
+        <a href={school.address.openstreetmap} title="Ouvrir le plan" class="relative">
+				  <Image src={school.address.imageMap} alt="Adresse de l'école" />
+          <div class="text-white absolute inset-0 z-10 bg-black bg-opacity-0 group hover:bg-opacity-40 transition-all  flex justify-center items-center">
+               <Icon name="mdi:magnify-plus" class="h-24 group-hover:opacity-100 opacity-0" />
+          </div>
+        </a>
+        <div class="flex flex-col gap-12">
+				  <SchoolInfos />
+          <SocialLinks />
+        </div>
+			</div>
+		</section>
+	</Container>
 </Layout>
