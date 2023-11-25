@@ -5,14 +5,17 @@ import type { ImageMetadata } from 'astro';
 
 interface Props {
 	name: string;
-	href: string;
+	slug: string;
 	image: ImageMetadata;
 }
 
-const { name, href, image } = Astro.props;
+const { name, slug, image } = Astro.props;
+
+const baseURL = import.meta.env.BASE_URL;
+const linkTeacher = `${baseURL}/${slug}`;
 ---
 
-<a href={href} class="group flex flex-col items-center gap-2">
+<a href={linkTeacher} class="group flex flex-col items-center gap-2">
 	<div class="h-48 w-48 overflow-hidden rounded-full border-4 border-gold group-hover:border-white">
 		<Image src={image} alt={`Portrait de ${name}`} class="object-cover" />
 	</div>

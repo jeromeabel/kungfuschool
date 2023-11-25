@@ -5,6 +5,9 @@ import CTALink from '@components/links/CTALink.astro';
 import TeacherAvatar from '@components/TeacherAvatar.astro';
 
 const teachers = await getCollection('teacher');
+
+const baseURL = import.meta.env.BASE_URL;
+const linkTeachers = `${baseURL}/ecole/enseignants`;
 ---
 
 <section class="my-16">
@@ -15,7 +18,7 @@ const teachers = await getCollection('teacher');
 		<div class="col-span-2 flex items-center justify-evenly gap-8">
 			{
 				teachers.map(({ data, slug }) => (
-					<TeacherAvatar image={data.avatar} name={`${data.first} ${data.last}`} href={slug} />
+					<TeacherAvatar image={data.avatar} name={`${data.first} ${data.last}`} {slug} />
 				))
 			}
 		</div>
@@ -33,5 +36,5 @@ const teachers = await getCollection('teacher');
 		</div>
 	</div>
 
-	<CTALink href="/ecole/enseignants" label="En savoir plus" icon="carbon:arrow-right" outline />
+	<CTALink href={linkTeachers} label="En savoir plus" icon="carbon:arrow-right" outline />
 </section>

@@ -6,6 +6,9 @@ import NewsCard from '@components/NewsCard.astro';
 import CTALink from '@components/links/CTALink.astro';
 
 const news = await getCollection('news');
+
+const baseURL = import.meta.env.BASE_URL;
+const linkNews = `${baseURL}/ecole/actualites`;
 ---
 
 <section class="py-16">
@@ -14,11 +17,6 @@ const news = await getCollection('news');
 		<div class="my-16 flex justify-between gap-8 pb-16">
 			{news.map(({ data, slug }) => <NewsCard {data} {slug} />)}
 		</div>
-		<CTALink
-			href="/ecole/actualites"
-			label="Voir toutes les actualités"
-			icon="carbon:arrow-right"
-			outline
-		/>
+		<CTALink href={linkNews} label="Voir toutes les actualités" icon="carbon:arrow-right" outline />
 	</Container>
 </section>

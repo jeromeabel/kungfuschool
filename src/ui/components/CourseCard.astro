@@ -8,11 +8,14 @@ export interface Props {
 }
 
 const { title1, title2, description, icon } = Astro.props;
+
+const baseURL = import.meta.env.BASE_URL;
+const linkCourse = `${baseURL}/cours/${icon}`;
 ---
 
 <a
 	class="flex flex-col gap-8 border border-white bg-white fill-black p-16 text-black hover:bg-black hover:fill-white hover:text-white"
-	href="/"
+	href={linkCourse}
 >
 	<div class="h-52">
 		<Icon name={icon} class="h-full w-full" />
