@@ -1,0 +1,90 @@
+---
+import { Image } from 'astro:assets';
+
+import Layout from '@layouts/Layout.astro';
+import H1 from '@components/H1.astro';
+import H2 from '@components/H2.astro';
+import Prose from '@components/Prose.astro';
+import Section from '@components/Section.astro';
+import Container from '@components/Container.astro';
+
+import LiImg from '@assets/partenariats/Li-Jianping.jpg';
+import EvImg from '@assets/partenariats/Evgenii-Lopatkin.jpg';
+import NaImg from '@assets/partenariats/Natalia-Neshcheret.jpg';
+
+import Gallery from '@components/Gallery.astro';
+
+const imageFiles = await Astro.glob('../../assets/partenariats/article/*');
+---
+
+<Layout title="Partenariats">
+	<Container>
+		<Section>
+			<H1>Partenariats</H1>
+			<p class="max-w-2xl pt-8 text-xl">
+				Nous avons tissé de vrais liens d’amitié martiale avec ce magnifique pays, grâce à la
+				rencontre de Maître Li Jianping, Evgenii Lopatkin et Natalia Neshcheret, lors de notre
+				rencontre au championnat du monde en 2014. Depuis, chaque retrouvaille est une immense joie
+				et un grand honneur de s’affronter sur les tapis car leur niveau de Wushu n’a d’égal que
+				leur grand cœur.
+			</p>
+			<Section>
+				<H2>LE KIRGHIZSTAN</H2>
+				<div class="grid grid-cols-3 gap-16">
+					<div>
+						<Image src={LiImg} alt="Portrait de Li Kianping" /><p class="my-6">
+							<em class="font-bold not-italic tracking-wide">Li Jianping</em> est président de
+							l'Association mondiale de Wushu traditionnel, Président de l'Association de Songxi
+							Neijiaquan (Chine), Conseiller en chef de la Fédération traditionnelle de Wushu de la
+							République kirghize 13e génération, Formateur du style Songxi Neijiaquan, multiple
+							Champion du monde, multiple Champion de Chine
+						</p>
+					</div>
+					<div>
+						<Image src={EvImg} alt="Portrait de Evgenii Lopatkin" /><p class="my-6">
+							<em class="font-bold not-italic tracking-wide">Evgenii Lopatkin</em> est président de
+							l’Association mondiale du Wushu traditionnel, Président de la Fédération
+							traditionnelle du Wushu de la République kirghize, Vice-président de l’Association
+							générale de Songxi Neijiaquan (Chine), Entraîneur honoraire de la République kirghize
+							14e génération, Formateur de Songxi Neijiaquan, Champion du monde, Champion d’Europe
+						</p>
+					</div>
+					<div>
+						<Image src={NaImg} alt="Portrait de Natalia Neshcheret" /><p class="my-6">
+							<em class="font-bold not-italic tracking-wide">Natalia Neshcheret</em> est secrétaire
+							générale de l’Association mondiale de Wushu traditionnel, Vice-présidente de la
+							Fédération traditionnelle de Wushu de la République kirghize, Entraîneur de la
+							République kirghize 14e génération, Disciple de Songxi Neijiaquan, Championne du
+							monde, Championne d’Europe
+						</p>
+					</div>
+				</div>
+			</Section>
+			<Section>
+				<H2>Association mondiale de Wushu traditionnel (W.T.W.A)</H2>
+				<p>Hrod Romero, Shasha Romero et Shaman Romero sont membres officiels de la W.T.W.A</p>
+
+				<p>
+					Li Jianping, Evgenii Lopatkin et Natalia Neshcheret sont membres d’honneur de l’I.C.M.A
+					Ecole Dragon Tigre
+				</p>
+
+				<p>
+					https://www.facebook.com/worldtraditional.wushuassociation.3/
+					http://www.iwuf.org/traditional-wushu/
+				</p>
+			</Section>
+
+			<Section>
+				<H2>Article</H2>
+				<div class="columns-1 gap-3 px-4 sm:columns-2 md:columns-3 lg:columns-4">
+					{
+						imageFiles.map((img) => (
+							<Image src={img.default} width="600" alt="Article" class="mb-3 w-full rounded" />
+						))
+					}
+				</div>
+			</Section>
+		</Section>
+	</Container>
+</Layout>
