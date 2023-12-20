@@ -1,0 +1,16 @@
+---
+import Layout from '@layouts/Layout.astro';
+import H1 from '@components/H1.astro';
+import Section from '@components/Section.astro';
+import Container from '@components/Container.astro';
+import NewsGrid from '@components/NewsGrid.astro';
+---
+
+<Layout title="Actualités">
+	<Container>
+		<Section>
+			<H1>Actualités</H1>
+			<NewsGrid nb={1000} cols={3} />
+		</Section>
+	</Container>
+</Layout>

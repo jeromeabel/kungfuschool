@@ -4,7 +4,7 @@ import { Image } from 'astro:assets';
 const { data, slug, rounded = false } = Astro.props;
 
 const baseURL = import.meta.env.BASE_URL;
-const linkNews = `${baseURL}/ecole/actualites/${slug}`;
+const linkNews = `${baseURL}/actualites/${slug}`;
 ---
 
 <a href={linkNews}>
