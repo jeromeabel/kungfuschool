@@ -1,0 +1,18 @@
+---
+import { getEntry } from 'astro:content';
+
+import IconLink from '@components/links/IconLink.astro';
+
+const shareData = [
+	{ href: '/', label: 'Facebook', icon: 'gg:facebook' },
+	{ href: '/', label: 'Twitter', icon: 'mdi:twitter' },
+	{ href: '/', label: 'Intagram', icon: 'mdi:instagram' },
+];
+---
+
+<div>
+	<span class="mb-2 block font-bold uppercase">Partager</span>
+	<div class="flex items-start gap-2">
+		{shareData.map(({ label, href, icon }) => <IconLink {label} {href} {icon} />)}
+	</div>
+</div>

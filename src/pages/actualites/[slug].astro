@@ -1,0 +1,49 @@
+---
+import Layout from '@layouts/Layout.astro';
+import H1 from '@components/H1.astro';
+import H2 from '@components/H2.astro';
+import Section from '@components/Section.astro';
+import Container from '@components/Container.astro';
+
+import { type CollectionEntry, getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
+import Prose from '@components/Prose.astro';
+import ShareLinks from '@components/links/ShareLinks.astro';
+
+interface Props {
+	entry: CollectionEntry<'news'>;
+}
+
+export async function getStaticPaths() {
+	const news = await getCollection('news');
+	return news.map((entry) => ({
+		params: { slug: entry.slug },
+		props: {
+			entry,
+		},
+	}));
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const dateISOString = new Date(entry.data.date).toISOString().slice(0, 10);
+---
+
+<Layout title={entry.data.title}>
+	<Container>
+		<Section>
+			<H1>{entry.data.title}</H1>
+			<p class="mb-16 mt-4 text-2xl">{entry.data.headline}</p>
+			<Image src={entry.data.cover} alt={entry.data.title} class="h-[600px] object-cover" />
+			<div class="grid grid-cols-[1fr_4fr] gap-16 py-16">
+				<aside class="flex flex-col gap-16">
+					<time class="">{dateISOString}</time>
+					<ShareLinks />
+				</aside>
+				<Prose>
+					<Content />
+				</Prose>
+			</div>
+		</Section>
+	</Container>
+</Layout>
