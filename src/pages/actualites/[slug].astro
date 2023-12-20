@@ -1,12 +1,11 @@
 ---
-import Layout from '@layouts/Layout.astro';
-import H1 from '@components/H1.astro';
-import H2 from '@components/H2.astro';
-import Section from '@components/Section.astro';
-import Container from '@components/Container.astro';
-
 import { type CollectionEntry, getCollection } from 'astro:content';
 import { Image } from 'astro:assets';
+
+import Layout from '@layouts/Layout.astro';
+import H1 from '@components/H1.astro';
+import Section from '@components/Section.astro';
+import Container from '@components/Container.astro';
 import Prose from '@components/Prose.astro';
 import ShareLinks from '@components/links/ShareLinks.astro';
 
@@ -18,15 +17,25 @@ export async function getStaticPaths() {
 	const news = await getCollection('news');
 	return news.map((entry) => ({
 		params: { slug: entry.slug },
-		props: {
-			entry,
-		},
+		props: { entry },
 	}));
 }
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
-const dateISOString = new Date(entry.data.date).toISOString().slice(0, 10);
+
+const dateOptions: Intl.DateTimeFormatOptions = {
+	weekday: 'long',
+	year: 'numeric',
+	month: 'long',
+	day: 'numeric',
+};
+const dateISOString = new Date(entry.data.date).toLocaleDateString('fr-FR', dateOptions);
+
+const allNewsImages = await Astro.glob('../../content/news/*/*.{jpg,JPG,jpeg,png,PNG}');
+const currentNewsImages = allNewsImages
+	.map((img) => img.default)
+	.filter((img) => img.src.includes(entry.slug) && !img.src.includes(entry.data.cover.src));
 ---
 
 <Layout title={entry.data.title}>
@@ -36,13 +45,19 @@ const dateISOString = new Date(entry.data.date).toISOString().slice(0, 10);
 			<p class="mb-16 mt-4 text-2xl">{entry.data.headline}</p>
 			<Image src={entry.data.cover} alt={entry.data.title} class="h-[600px] object-cover" />
 			<div class="grid grid-cols-[1fr_4fr] gap-16 py-16">
-				<aside class="flex flex-col gap-16">
-					<time class="">{dateISOString}</time>
+				<aside class="flex flex-col gap-8">
+					<time class="first-letter:uppercase">{dateISOString}</time>
 					<ShareLinks />
 				</aside>
 				<Prose>
 					<Content />
 				</Prose>
+			</div>
+		</Section>
+
+		<Section>
+			<div class="grid grid-cols-2 gap-8">
+				{currentNewsImages.map((img) => <Image src={img} alt="" />)}
 			</div>
 		</Section>
 	</Container>
