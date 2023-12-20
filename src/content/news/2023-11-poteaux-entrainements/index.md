@@ -1,6 +1,6 @@
 ---
-title: "Nouveaux poteaux d entraînement"
-headline: "Pour les prochains stages"
+title: "Nouveaux poteaux d'entraînement"
+headline: 'Pour les prochains stages'
 date: 2023-11-01
 cover: ./cover.jpg
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus assumenda deleniti itaque molestias odio quidem praesentium, numquam veniam animi ipsam velit iure atque delectus debitis quisquam tempore optio ea corrupti.
