@@ -1,25 +1,16 @@
 ---
-import { getCollection } from 'astro:content';
-
 import Layout from '@layouts/Layout.astro';
 import H1 from '@components/H1.astro';
-import H2 from '@components/H2.astro';
 import Section from '@components/Section.astro';
 import Container from '@components/Container.astro';
-import NewsCard from '@components/NewsCard.astro';
-
-const news = await getCollection('news');
-const baseURL = import.meta.env.BASE_URL;
-const linkNews = `${baseURL}/ecole/actualites`;
+import NewsGrid from '@components/NewsGrid.astro';
 ---
 
 <Layout title="Actualités">
 	<Container>
 		<Section>
 			<H1>Actualités</H1>
-			<div class="my-16 flex justify-between gap-8 pb-16">
-				{news.map(({ data, slug }) => <NewsCard {data} {slug} />)}
-			</div>
+			<NewsGrid nb={1000} cols={3} />
 		</Section>
 	</Container>
 </Layout>

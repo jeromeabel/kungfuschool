@@ -6,7 +6,7 @@ import CoursesSummary from '@components/CoursesSummary.astro';
 import TeachersSummary from '@components/TeachersSummary.astro';
 import SchoolInfosSummary from '@components/SchoolInfosSummary.astro';
 import TestimonialsSummary from '@components/TestimonialsSummary.astro';
-import NewsSummary from '@components/NewsSummary.astro';
+import NewsGridSummary from '@components/NewsGridSummary.astro';
 ---
 
 <Layout>
@@ -17,5 +17,5 @@ import NewsSummary from '@components/NewsSummary.astro';
 	</Container>
 	<SchoolInfosSummary />
 	<TestimonialsSummary />
-	<NewsSummary />
+	<NewsGridSummary nb={2} cols={2} />
 </Layout>

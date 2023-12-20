@@ -1,0 +1,20 @@
+---
+import { getCollection } from 'astro:content';
+
+import NewsCard from '@components/NewsCard.astro';
+
+interface Props {
+	nb?: number;
+	cols?: number;
+	rounded?: boolean;
+}
+const { nb = 2, cols = 2, rounded } = Astro.props;
+
+const news = (await getCollection('news'))
+	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+	.slice(0, nb);
+---
+
+<div class=`my-16 grid grid-cols-${cols} gap-8`>
+	{news.map(({ data, slug }) => <NewsCard {data} {slug} {rounded} />)}
+</div>

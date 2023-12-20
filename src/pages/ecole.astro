@@ -17,15 +17,14 @@ import CTALink from '@components/links/CTALink.astro';
 import NewsCard from '@components/NewsCard.astro';
 
 import PaternshipImg from '@assets/partenariats/Li-Jianping.jpg';
+import NewsGridSummary from '@components/NewsGridSummary.astro';
 
 const entry = await getEntry('school', 'dragontigre');
-const news = await getCollection('news');
 
 const { data: school } = entry;
 const { introContent, mainContent } = splitMarkdown(entry.body);
 
 const baseURL = import.meta.env.BASE_URL;
-const linkNews = `${baseURL}/ecole/actualites`;
 const linkPaternships = `${baseURL}/ecole/partenariats`;
 ---
 
@@ -58,19 +57,7 @@ const linkPaternships = `${baseURL}/ecole/partenariats`;
 			</div>
 		</Section>
 
-		<Section>
-			<H2>Actualités</H2>
-			<div class="my-16 flex justify-between gap-8 pb-16">
-				{news.map(({ data, slug }) => <NewsCard {data} {slug} />)}
-			</div>
-
-			<CTALink
-				href={linkNews}
-				label="Voir toutes les actualités"
-				icon="carbon:arrow-right"
-				outline
-			/>
-		</Section>
+		<NewsGridSummary nb={6} cols={3} />
 
 		<Section>
 			<H2>Histoire de l'école</H2>
