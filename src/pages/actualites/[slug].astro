@@ -47,7 +47,7 @@ const currentNewsImages = allNewsImages
 			<div class="grid grid-cols-[1fr_4fr] gap-16 py-16">
 				<aside class="flex flex-col gap-8">
 					<time class="first-letter:uppercase">{dateISOString}</time>
-					<ShareLinks />
+					<ShareLinks title={entry.data.title} description={entry.data.description} />
 				</aside>
 				<Prose>
 					<Content />

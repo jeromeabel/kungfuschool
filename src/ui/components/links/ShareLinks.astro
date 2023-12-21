@@ -1,12 +1,35 @@
 ---
-import { getEntry } from 'astro:content';
-
 import IconLink from '@components/links/IconLink.astro';
 
+interface Props {
+	url?: string;
+	title: string;
+	description: string;
+}
+
+const { url = Astro.request.url, title, description } = Astro.props;
+
 const shareData = [
-	{ href: '/', label: 'Facebook', icon: 'gg:facebook' },
-	{ href: '/', label: 'Twitter', icon: 'mdi:twitter' },
-	{ href: '/', label: 'Intagram', icon: 'mdi:instagram' },
+	{
+		href: `https://www.facebook.com/sharer/sharer.php?u=${url}`,
+		label: 'Facebook',
+		icon: 'fa:facebook-f',
+	},
+	{
+		href: `https://twitter.com/intent/tweet?url=${url}`,
+		label: 'Twitter',
+		icon: 'Fa6BrandsXTwitter',
+	},
+	{
+		href: `https://www.linkedin.com/sharing/share-offsite/?url=${url}`,
+		label: 'LinkedIn',
+		icon: 'bx:bxl-linkedin',
+	},
+	{
+		href: `mailto:?subject=${title}&body=${description}%0A${url}`,
+		label: 'Email',
+		icon: 'mdi:email',
+	},
 ];
 ---
 

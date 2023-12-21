@@ -4,6 +4,13 @@ import { Icon } from 'astro-icon';
 const { href, label, icon } = Astro.props;
 ---
 
-<a href={href} aria-label={label} title={label} class="rounded-full bg-white p-2 text-black hover:bg-gold">
+<a
+	href={href}
+	aria-label={label}
+	title={label}
+	class="rounded-full bg-white p-2 text-black hover:bg-gold"
+	rel="nofollow, noopener, noreferrer"
+	target="_blank"
+>
 	<Icon name={icon} size={24} />
 </a>
