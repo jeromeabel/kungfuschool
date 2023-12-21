@@ -1,27 +1,36 @@
 ---
+import type { ImageMetadata } from 'astro';
+
 import Header from '@components/Header.astro';
 import Footer from '@components/Footer.astro';
+import SEO from '@components/SEO.astro';
 
 import '@styles/global.css';
 import '@fontsource/inter/400.css';
 import '@fontsource/inter/600.css';
 
+interface Props {
+	title?: string | undefined;
+	description?: string | undefined;
+	publishedDate?: Date | undefined;
+	image?: ImageMetadata | undefined;
+}
+
+const { title, description, publishedDate, image } = Astro.props;
+
 const baseURL = import.meta.env.BASE_URL;
 const fontwoff = `${baseURL}/fonts/shanghai.woff`;
 const fontwoff2 = `${baseURL}/fonts/shanghai.woff2`;
 const sitemap = `${baseURL}/sitemap-index.xml`;
-const favicon = `${baseURL}/favicon.svg`;
+// const favicon = `${baseURL}/favicon.svg`;
+//<link rel="icon" type="image/svg+xml" href={favicon} />
 ---
 
-<html lang="en">
+<html lang="fr">
 	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href={favicon} />
+		<SEO page={title} {description} {publishedDate} {image} />
 		<link rel="preload" href={fontwoff2} as="font" type="font/woff2" crossorigin />
 		<link rel="sitemap" href={sitemap} />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Accueil</title>
 	</head>
 	<body class="grid min-h-screen grid-rows-[auto_1fr_auto] bg-black text-white">
 		<Header />
@@ -29,17 +38,16 @@ const favicon = `${baseURL}/favicon.svg`;
 			<slot />
 		</main>
 		<Footer />
+		<style is:global define:vars={{ fontwoff, fontwoff2 }}>
+			@font-face {
+				font-family: 'Shanghai';
+				src:
+					url(var(--fontwoff2)) format('woff2'),
+					url(var(--fontwoff)) format('woff');
+				font-weight: normal;
+				font-style: normal;
+				font-display: swap;
+			}
+		</style>
 	</body>
 </html>
-
-<style is:global define:vars={{ fontwoff, fontwoff2 }}>
-	@font-face {
-		font-family: 'Shanghai';
-		src:
-			url(var(--fontwoff2)) format('woff2'),
-			url(var(--fontwoff)) format('woff');
-		font-weight: normal;
-		font-style: normal;
-		font-display: swap;
-	}
-</style>
