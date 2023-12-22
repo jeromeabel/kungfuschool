@@ -38,7 +38,11 @@ const currentNewsImages = allNewsImages
 	.filter((img) => img.src.includes(entry.slug) && !img.src.includes(entry.data.cover.src));
 ---
 
-<Layout title={entry.data.title}>
+<Layout
+	title={entry.data.title}
+	description={entry.data.description}
+	publishedDate={entry.data.date}
+>
 	<Container>
 		<Section>
 			<H1>{entry.data.title}</H1>
