@@ -24,7 +24,7 @@ const { name, image, year, text } = Astro.props;
 
 	<div class="flex items-center gap-8">
 		<div class="h-36 w-36 overflow-hidden rounded-full">
-			<Image src={image} alt=`Portrait de ${name}` class="h-full w-full object-cover" />
+			<Image src={image} alt={`Portrait de ${name}`} class="h-full w-full object-cover" />
 		</div>
 		<div>
 			<p><em>{name}</em></p>
