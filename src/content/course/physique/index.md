@@ -1,4 +1,5 @@
 ---
+order: 5
 title: 'Préparation physique'
 type: 'yearly'
 description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur'

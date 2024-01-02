@@ -1,4 +1,5 @@
 ---
+order: 4
 title: 'Shaolin Kids'
 type: 'yearly'
 description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur'

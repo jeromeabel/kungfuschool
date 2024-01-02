@@ -1,4 +1,5 @@
 ---
+order: 0
 title: 'Tai-Chi'
 type: 'yearly'
 description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur'

@@ -1,4 +1,5 @@
 ---
+order: 3
 title: 'Qi Cong'
 type: 'yearly'
 description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur'

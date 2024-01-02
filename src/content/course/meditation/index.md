@@ -1,4 +1,5 @@
 ---
+order: 6
 title: 'Méditation'
 type: 'yearly'
 description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur'

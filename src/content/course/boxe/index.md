@@ -1,5 +1,6 @@
 ---
-title: 'Combat'
+order: 2
+title: 'Boxe chinoise'
 type: 'yearly'
 description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur'
 cover: './cover.jpg'
