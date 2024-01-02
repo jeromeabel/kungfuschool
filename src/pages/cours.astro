@@ -1,7 +1,47 @@
 ---
+import Container from '@components/Container.astro';
+import H1 from '@components/H1.astro';
+import Section from '@components/Section.astro';
 import Layout from '@layouts/Layout.astro';
+import { Image } from 'astro:assets';
+
+import imageCours from '@assets/cours.jpg';
+import CoursesGrid from '@components/CoursesGrid.astro';
 ---
 
 <Layout title="Cours">
-	<h1>Page des cours</h1>
+	<Container>
+		<Section>
+			<H1>Cours</H1>
+			<div class="grid grid-cols-[1fr_2fr] gap-20 text-xl">
+				<div class="pt-8">
+					<p>
+						Deux styles sont enseignés :
+						<ul class="list-inside list-disc">
+							<li>le <strong>kung fu traditionnel des dix animaux</strong></li>
+							<li>le <strong>style Bu di zhen</strong></li>
+						</ul>
+					</p>
+					<p class="pt-8">
+						Pour Shifu Hrod et Simu Sabine il est avant tout question de «don de soi», surtout avec
+						leurs élèves. Le don de soi passe autant par leurs connaissances que par l'énergie
+						qu'ils mettent à accompagner, comprendre, adapter, rassurer et faire grandir chacun de
+						leurs élèves. Shifu Hrod dit toujours: <strong
+							>"c'est le kung fu qui doit s'adapter à l'individu et non l'individu au kung fu"</strong
+						>.
+					</p>
+				</div>
+
+				<Image
+					src={imageCours}
+					class="h-[500px] object-cover"
+					alt="Intérieur de la salle de cours"
+				/>
+			</div>
+		</Section>
+
+		<Section>
+			<CoursesGrid />
+		</Section>
+	</Container>
 </Layout>
