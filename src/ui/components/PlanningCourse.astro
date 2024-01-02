@@ -2,13 +2,11 @@
 import hoursToTailwindColumns from '@utils/convertHours';
 
 const { course } = Astro.props;
-const [start, end] = hoursToTailwindColumns(course.hours) || [1, 2];
-const css = `col-start-${start} col-end-${end} p-8 border`;
+const [start, end] = hoursToTailwindColumns(course.hours);
 ---
 
-<div class={css}>
-	{course.title}
-	<!-- <p></p>
+<div class={`col-start-${start} col-end-${end} p-4 border text-center`}>
+	<h3 class="text-xl font-bold uppercase">{course.title}</h3>
 	<p>{course.level}</p>
-	<p>{course.hours}</p> -->
+	<p>{course.hours}</p>
 </div>
