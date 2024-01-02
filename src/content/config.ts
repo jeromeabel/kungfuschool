@@ -43,6 +43,7 @@ const coursesCollection = defineCollection({
 		cover: z.string(),
 		illustration: z.string(),
 		schedules: z.array(z.string()),
+		order: z.number().optional(),
 	}),
 });
 
