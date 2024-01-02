@@ -1,0 +1,9 @@
+---
+import PlanningDay from '@components/PlanningDay.astro';
+
+import planningData from '@assets/planning.json';
+---
+
+<div class="flex flex-col gap-4 py-8">
+	{Object.entries(planningData).map((day) => <PlanningDay {day} />)}
+</div>

@@ -1,4 +1,4 @@
-export default function hoursToTailwindClasses(texte: string): [string, string] | null {
+export default function hoursToTailwindColumns(texte: string): [number, number] | null {
 	const heuresExtraits = extractHours(texte, 'h');
 
 	if (heuresExtraits === null) {
@@ -12,10 +12,12 @@ export default function hoursToTailwindClasses(texte: string): [string, string] 
 	const unitFin = Math.ceil((heureFin - 17) * 4);
 
 	// Limiter les valeurs entre 0 et 24 * 4 (pour couvrir les 24 heures en unités Tailwind)
-	const colStart = Math.max(0, unitDebut);
-	const colSpan = Math.min(24 * 4, unitFin - unitDebut);
+	const colStart = Math.max(1, unitDebut + 1);
+	//const colSpan = Math.min(24 * 4, unitFin - unitDebut);
+	const colEnd = Math.min(24 * 4, unitFin + 1);
 
-	return [`col-start-${colStart}`, `col-span-${colSpan}`];
+	// return [`col-start-${colStart}`, `col-end-${colEnd}`];
+	return [colStart, colEnd];
 }
 
 function extractHours(texte: string, separateur: string = 'h'): [number, number] | null {

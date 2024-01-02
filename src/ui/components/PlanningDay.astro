@@ -1,0 +1,16 @@
+---
+import PlanningCourse from './PlanningCourse.astro';
+
+const { day } = Astro.props;
+const [dayString, dayData] = day;
+---
+
+<div class="flex items-center">
+	<p class="w-[180px] uppercase">{dayString}</p>
+	<div class="grid flex-1 grid-cols-24 border border-stone-600">
+		<!-- <div class="col-start-1 col-end-5 border">01</div>
+		<div class="col-start-8 col-end-16 border">02</div>
+		<div class="col-start-16 col-end-20 border">03</div> -->
+		{dayData.map((course: any, index: number) => <PlanningCourse {course} first={index === 0} />)}
+	</div>
+</div>

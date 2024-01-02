@@ -1,12 +1,14 @@
 ---
+import { Image } from 'astro:assets';
+
 import Container from '@components/Container.astro';
 import H1 from '@components/H1.astro';
 import Section from '@components/Section.astro';
 import Layout from '@layouts/Layout.astro';
-import { Image } from 'astro:assets';
+import CoursesGrid from '@components/CoursesGrid.astro';
+import PlanningWeek from '@components/PlanningWeek.astro';
 
 import imageCours from '@assets/cours.jpg';
-import CoursesGrid from '@components/CoursesGrid.astro';
 ---
 
 <Layout title="Cours">
@@ -42,6 +44,12 @@ import CoursesGrid from '@components/CoursesGrid.astro';
 
 		<Section>
 			<CoursesGrid />
+		</Section>
+
+		<Section>
+			<h2 class="font-bold uppercase">Planning</h2>
+			<p class="font-bold">Du 10/09/2023 au 30/06/2024</p>
+			<PlanningWeek />
 		</Section>
 	</Container>
 </Layout>
