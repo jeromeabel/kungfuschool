@@ -4,7 +4,7 @@ title: 'En ligne'
 type: 'yearly'
 description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur'
 cover: './cover.jpg'
-illustration: './screen.svg'
+illustration: 'screen'
 schedules:
   - 'lundi 18h-22h'
   - 'mardi 18h-22h'

@@ -4,7 +4,7 @@ title: 'Qi Cong'
 type: 'yearly'
 description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur'
 cover: './cover.jpg'
-illustration: './qicong.svg'
+illustration: 'qicong'
 schedules:
   - 'lundi 18h-19h30'
   - 'mardi 20h-21h30'

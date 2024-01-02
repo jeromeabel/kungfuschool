@@ -4,7 +4,7 @@ title: 'Cours particuliers'
 type: 'single'
 description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur'
 cover: './cover.jpg'
-illustration: './combat.svg'
+illustration: 'combat'
 schedules:
   - 'lundi 10h-17h'
   - 'mardi 10h-17h'

@@ -1,0 +1,23 @@
+---
+import { type CollectionEntry } from 'astro:content';
+import { Icon } from 'astro-icon';
+
+interface Props {
+	course: CollectionEntry<'course'>;
+}
+
+const { course } = Astro.props;
+
+const baseURL = import.meta.env.BASE_URL;
+const linkCourse = `${baseURL}/cours/${course.slug}`;
+---
+
+<a
+	class="flex flex-col gap-16 border border-white bg-white fill-black px-4 py-16 text-black transition-all hover:bg-black hover:fill-white hover:text-white"
+	href={linkCourse}
+>
+	<div class="h-56">
+		<Icon name={course.data.illustration} class="h-full w-full" />
+	</div>
+	<h2 class="text-center uppercase">{course.data.title}</h2>
+</a>
