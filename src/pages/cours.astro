@@ -1,14 +1,23 @@
 ---
 import { Image } from 'astro:assets';
 
-import Container from '@components/Container.astro';
-import H1 from '@components/H1.astro';
-import Section from '@components/Section.astro';
 import Layout from '@layouts/Layout.astro';
+import Container from '@components/Container.astro';
+import Section from '@components/Section.astro';
+import H1 from '@components/H1.astro';
+import H2 from '@components/H2.astro';
+
 import CoursesGrid from '@components/CoursesGrid.astro';
 import PlanningWeek from '@components/PlanningWeek.astro';
+import PricesGrid from '@components/PricesGrid.astro';
 
 import imageCours from '@assets/cours.jpg';
+
+import { pricesOptions } from '@assets/data/prices';
+import PriceCardSmall from '@components/PriceCardSmall.astro';
+
+const pricesSingle = ['private', 'meditation', 'samedi'].map((key) => pricesOptions[key]);
+//console.log(Object.entries(pricesOptions).slice(4));
 ---
 
 <Layout title="Cours">
@@ -50,6 +59,22 @@ import imageCours from '@assets/cours.jpg';
 			<h2 class="font-bold uppercase">Planning</h2>
 			<p class="font-bold">Du 10/09/2023 au 30/06/2024</p>
 			<PlanningWeek />
+		</Section>
+
+		<Section>
+			<H2>Tarifs <span class="text-2xl font-normal">à l'année</span></H2>
+			<PricesGrid />
+		</Section>
+
+		<Section>
+			<H2>Tarifs <span class="text-2xl font-normal">à la carte</span></H2>
+			<div class="flex gap-8 py-8">
+				{
+					pricesSingle.map(({ title, price, description }) => (
+						<PriceCardSmall {title} {price} {description} />
+					))
+				}
+			</div>
 		</Section>
 	</Container>
 </Layout>

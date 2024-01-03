@@ -1,0 +1,70 @@
+---
+const { card, index } = Astro.props;
+
+import { pricesOptions } from '@assets/data/prices';
+import Icon from 'astro-icon';
+
+const css = [
+	'bg-slate-200',
+	'bg-slate-50 outline outline-8 -outline-offset-2 outline-green-300',
+	'bg-slate-200',
+	'bg-slate-200',
+];
+
+const visible = card.options.length > 0;
+
+const isOutlined = index === 1;
+
+const cssButton = isOutlined
+	? 'bg-black text-white hover:bg-white hover:text-black hover:border-black'
+	: 'bg-white text-black hover:bg-black hover:text-white';
+---
+
+<div class={`flex flex-col flex-auto p-8 gap-6 h-fit rounded-2xl ${css[index]} text-black`}>
+	<div class="flex flex-col justify-between gap-4">
+		<div class="">
+			<h4 class="text-2xl font-bold">{card.title}</h4>
+			<span class="text-6xl font-bold"
+				>{card.price}€
+				<span class="text-sm opacity-50">/an</span>
+			</span>
+			<p class="">{card.subtitle}</p>
+		</div>
+
+		<ul class="flex list-inside flex-col gap-2">
+			{
+				card.content.map((item: unknown) => (
+					<li class="flex items-center gap-2">
+						<Icon
+							name="IonCheckmarkSharp"
+							class="h-6 w-6 flex-shrink-0 rounded-full border border-green-500 p-1 text-green-500"
+						/>
+						{item}
+					</li>
+				))
+			}
+		</ul>
+	</div>
+
+	{
+		visible && (
+			<div class="text-sm">
+				<p>Options :</p>
+				<ul class="list-inside list-disc">
+					{card.options.map((item: string) => (
+						<li>
+							{pricesOptions[item].price}€ : {pricesOptions[item].title}
+						</li>
+					))}
+				</ul>
+			</div>
+		)
+	}
+
+	<a
+		rel="noopener noreferrer"
+		href="#"
+		class={`rounded-full content-end border border-transparent px-6 py-2 text-center font-semibold ${cssButton}`}
+		>Choisir</a
+	>
+</div>
