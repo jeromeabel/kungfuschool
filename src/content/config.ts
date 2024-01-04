@@ -44,7 +44,7 @@ const coursesCollection = defineCollection({
 			description: z.string(),
 			cover: image(),
 			illustration: z.string(),
-	}),
+		}),
 });
 
 const teachersCollection = defineCollection({
@@ -59,8 +59,8 @@ const teachersCollection = defineCollection({
 			introduction: z.string(),
 			description: z.string(),
 			year: z.number(),
-			diploma: z.string(),
-			palmares: z.string(),
+			diploma: image(),
+			palmares: image(),
 		}),
 });
 
