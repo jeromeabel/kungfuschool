@@ -1,15 +1,48 @@
 ---
+import { getCollection } from 'astro:content';
+
 import Layout from '@layouts/Layout.astro';
 import Container from '@components/Container.astro';
 import Section from '@components/Section.astro';
 import H1 from '@components/H1.astro';
-import H2 from '@components/H2.astro';
+import { Image } from 'astro:assets';
+
+const teachers = await getCollection('teacher');
+
+const baseURL = import.meta.env.BASE_URL;
+const linkTeachers = `${baseURL}/enseignants`;
 ---
 
 <Layout title="Enseignants">
 	<Container>
 		<Section>
 			<H1>Enseignants</H1>
+			<p class="text-xl">
+				Les cours sont assurés par les maîtres Hrod Romero (Shifu) et Shasha Romero (Simu), assistés
+				par l’institutrice Shaman Romero (Laoshi).
+			</p>
+		</Section>
+
+		<Section>
+			<div class="col-span-2 flex items-center justify-evenly gap-8">
+				{
+					teachers.map(({ data, slug }) => (
+						<a
+							href={`${linkTeachers}/${slug}`}
+							class="group flex h-full flex-1 flex-col items-center gap-8"
+						>
+							<Image
+								src={data.cover}
+								alt={`Portrait de ${data.first} ${data.last}`}
+								class="aspect-square object-contain"
+							/>
+							<p class="text-lg font-bold">
+								{data.first} {data.last}
+							</p>
+						</a>
+					))
+				}
+			</div>
 		</Section>
 	</Container>
 </Layout>
