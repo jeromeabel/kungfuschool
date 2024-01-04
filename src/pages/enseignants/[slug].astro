@@ -7,9 +7,6 @@ import Layout from '@layouts/Layout.astro';
 import H1 from '@components/H1.astro';
 import Section from '@components/Section.astro';
 import Container from '@components/Container.astro';
-import Prose from '@components/Prose.astro';
-import H2 from '@components/H2.astro';
-import { map } from 'astro/zod';
 
 interface Props {
 	entry: CollectionEntry<'teacher'>;
@@ -22,19 +19,6 @@ export async function getStaticPaths() {
 		props: { entry },
 	}));
 }
-
-/*
-first: Laoshi
-last: Shaman
-rank: Institutrice
-cover: ./cover.jpg
-avatar: ./avatar.jpg
-introduction: Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta velit sapiente vel, quaerat numquam sequi. Soluta maxime, iure molestiae architecto incidunt necessitatibus dolorem officiis repudiandae, ab eligendi doloremque, ullam perspiciatis!
-description: Porro quos modi perspiciatis voluptates itaque quis earum. Velit quisquam est iusto, cumque error sunt unde consectetur corrupti maxime laudantium omnis, ab sit tempore quibusdam! Laborum, similique? Sunt, deleniti quo!
-year: 2002
-diploma: Lorem ipsum dolor sit amet consectetur
-palmares: Lorem ipsum dolor sit amet consectetur
-*/
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
