@@ -2,7 +2,7 @@
 first: Laoshi
 last: Shaman
 rank: Institutrice
-cover: ./cover.jpg
+cover: ./portrait.jpg
 avatar: ./avatar.jpg
 introduction: Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta velit sapiente vel, quaerat numquam sequi. Soluta maxime, iure molestiae architecto incidunt necessitatibus dolorem officiis repudiandae, ab eligendi doloremque, ullam perspiciatis!
 description: Porro quos modi perspiciatis voluptates itaque quis earum. Velit quisquam est iusto, cumque error sunt unde consectetur corrupti maxime laudantium omnis, ab sit tempore quibusdam! Laborum, similique? Sunt, deleniti quo!
