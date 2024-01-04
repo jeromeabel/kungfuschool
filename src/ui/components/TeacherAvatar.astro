@@ -12,7 +12,7 @@ interface Props {
 const { name, slug, image } = Astro.props;
 
 const baseURL = import.meta.env.BASE_URL;
-const linkTeacher = `${baseURL}/${slug}`;
+const linkTeacher = `${baseURL}/enseignants/${slug}`;
 ---
 
 <a href={linkTeacher} class="group flex flex-col items-center gap-2">
