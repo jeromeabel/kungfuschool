@@ -62,6 +62,7 @@ const teachersCollection = defineCollection({
 			palmares: image(),
 			diploma_text: z.array(z.string()),
 			palmares_text: z.array(z.record(z.array(z.string()))),
+			images: z.array(image()),
 		}),
 });
 

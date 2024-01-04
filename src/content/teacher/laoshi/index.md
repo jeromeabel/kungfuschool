@@ -20,6 +20,10 @@ palmares_text:
       - '2014 : Vice-championne du monde en Kung Fu / Vice-championne du monde Taï Chi équipe'
   - CHAMPIONNAT DU MONDE, IWUF:
       - '2014 : 3éme en Kung Fu / 3ème Taï Chi équipe'
+images:
+  - './photo1.jpg'
+  - './photo2.jpg'
+  - './photo3.jpg'
 ---
 
 Laoshi (professeur) Shaman Romero est reconnue officiellement 5 ème génération du Bu Di Zhen Kung fu et Taïji. Les autorités de Beijing lui délivrent son diplôme d’instructeur en Kung fu en 2013.

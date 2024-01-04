@@ -23,6 +23,13 @@ palmares_text:
       - '2018 : Double champion du monde en Kung Fu, 2 médailles d’argent  en Taï Chi'
       - '2016 : 2 médailles d’or en Kung Fu , 1 argent en équipe Taï Chi'
       - '2014 : Médaille d’or, vice-champion du monde en Taï Chi équipe'
+images:
+  - './photo1.jpg'
+  - './photo2.jpg'
+  - './photo3.jpg'
+  - './photo4.jpg'
+  - './photo5.jpg'
+  - './photo6.jpg'
 ---
 
 Maître depuis 2007 et pratiquant le style Shaolin nan de la boxe des dix animaux depuis 1982, et le style Bu Di Zhen de la famille Gao, les autorités de Beijing lui délivrent en 2013, son diplôme de Grand Maître en Kung fu et de ce fait il devient Master international. Shifu Hrod est reconnu officiellement 4 ème génération du Bu Di Zhen Kung fu et Taïji.

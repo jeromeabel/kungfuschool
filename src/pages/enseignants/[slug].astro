@@ -7,6 +7,7 @@ import Layout from '@layouts/Layout.astro';
 import H1 from '@components/H1.astro';
 import Section from '@components/Section.astro';
 import Container from '@components/Container.astro';
+import { getEntryData } from 'node_modules/astro/dist/content/utils';
 
 interface Props {
 	entry: CollectionEntry<'teacher'>;
@@ -89,6 +90,12 @@ const name = `${entry.data.first} ${entry.data.last}`;
 				<div class="flex-1">
 					<Image src={entry.data.palmares} alt={`Compétition de ${name}`} class="w-auto" />
 				</div>
+			</div>
+		</Section>
+
+		<Section>
+			<div class="grid grid-cols-3 gap-8">
+				{entry.data.images.map((img) => <Image src={img} alt="" class="h-full object-cover" />)}
 			</div>
 		</Section>
 	</Container>

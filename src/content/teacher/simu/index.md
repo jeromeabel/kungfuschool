@@ -22,6 +22,13 @@ palmares_text:
       - '2018 : 1 médaille d’or en Kung Fu / 1 médaille d’argent en Taï Chi'
       - '2016 : Triple médailles d’argent en Kung Fu / Taï Chi / Taï Chi équip'
       - '2014 : 1 médaille d’or et 1 argent en Kung Fu / 1 médaille d’ argent en Taï Chi équipe'
+images:
+  - './photo1.jpg'
+  - './photo2.jpg'
+  - './photo3.jpg'
+  - './photo4.jpg'
+  - './photo5.jpg'
+  - './photo6.jpg'
 ---
 
 Simu Shasha est reconnue officiellement 4 ème génération du Bu Di Zhen Kung fu et Taïji. les autorités de Beijing lui délivrent son diplôme de Maître en Kung fu et de ce fait elle devient Master internationale en 20
