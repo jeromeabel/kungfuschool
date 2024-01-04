@@ -5,13 +5,6 @@ type: 'single'
 description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur'
 cover: './cover.jpg'
 illustration: 'combat'
-schedules:
-  - 'lundi 10h-17h'
-  - 'mardi 10h-17h'
-  - 'mercredi 10h-17h'
-  - 'jeudi 10h-17h'
-  - 'vendredi 10h-17h'
-  - 'samedi 10h-17h'
 ---
 
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur eos quia voluptatibus velit eius debitis. Facilis expedita quas impedit doloribus, eum veniam nam? Magnam provident numquam nesciunt?

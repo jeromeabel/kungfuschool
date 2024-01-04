@@ -36,14 +36,14 @@ const schoolCollection = defineCollection({
 
 const coursesCollection = defineCollection({
 	type: 'content',
-	schema: z.object({
-		title: z.string(),
-		type: z.enum(['yearly', 'single']),
-		description: z.string(),
-		cover: z.string(),
-		illustration: z.string(),
-		schedules: z.array(z.string()),
-		order: z.number().default(0),
+	schema: ({ image }) =>
+		z.object({
+			order: z.number().default(0),
+			title: z.string(),
+			type: z.enum(['yearly', 'single']),
+			description: z.string(),
+			cover: image(),
+			illustration: z.string(),
 	}),
 });
 

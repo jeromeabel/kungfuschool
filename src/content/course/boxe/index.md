@@ -5,9 +5,6 @@ type: 'yearly'
 description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur'
 cover: './cover.jpg'
 illustration: 'boxe'
-schedules:
-  - 'lundi 18h-19h30'
-  - 'mardi 20h-21h30'
 ---
 
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur eos quia voluptatibus velit eius debitis. Facilis expedita quas impedit doloribus, eum veniam nam? Magnam provident numquam nesciunt?
