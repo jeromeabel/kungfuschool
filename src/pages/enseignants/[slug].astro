@@ -9,6 +9,7 @@ import Section from '@components/Section.astro';
 import Container from '@components/Container.astro';
 import Prose from '@components/Prose.astro';
 import H2 from '@components/H2.astro';
+import { map } from 'astro/zod';
 
 interface Props {
 	entry: CollectionEntry<'teacher'>;
@@ -48,7 +49,7 @@ const name = `${entry.data.first} ${entry.data.last}`;
 				<div class="flex flex-1 flex-col gap-8">
 					<H1>{name}</H1>
 					<div class="prose prose-xl max-w-2xl text-white">
-						{entry.data.introduction}
+						<Content />
 					</div>
 					<div class="flex items-center gap-3">
 						<Icon name="MaterialSymbolsCalendarMonthRounded" class="h-8" />
@@ -61,12 +62,15 @@ const name = `${entry.data.first} ${entry.data.last}`;
 			</div>
 		</Section>
 		<Section>
-			<div class="flex-start flex">
+			<div class="flex-start flex gap-16">
 				<div class="flex-1">
 					<div class="flex items-center gap-3">
 						<Icon name="vaadin_diploma" class="h-8" />
 						<span class="font-semibold uppercase">Diplômes</span>
 					</div>
+					<ul class="ms-10 mt-4 list-inside list-disc">
+						{entry.data.diploma_text.map((item) => <li>{item}</li>)}
+					</ul>
 				</div>
 
 				<div class="flex-1">
@@ -76,12 +80,26 @@ const name = `${entry.data.first} ${entry.data.last}`;
 		</Section>
 
 		<Section>
-			<div class="flex-start flex">
+			<div class="flex-start flex gap-16">
 				<div class="flex-1">
 					<div class="flex items-center gap-3">
 						<Icon name="emojione-monotone_sports-medal" class="h-8" />
 						<span class="font-semibold uppercase">Palmarès</span>
 					</div>
+					<ul class="ms-10 mt-4">
+						{
+							entry.data.palmares_text.map((event) => (
+								<li class="mt-4">
+									<strong>{Object.keys(event)[0]}</strong>
+									<ul class="list-inside list-disc">
+										{Object.values(event)[0].map((detail) => (
+											<li>{detail}</li>
+										))}
+									</ul>
+								</li>
+							))
+						}
+					</ul>
 				</div>
 
 				<div class="flex-1">

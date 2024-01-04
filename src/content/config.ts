@@ -56,11 +56,12 @@ const teachersCollection = defineCollection({
 			rank: z.string(),
 			cover: image(),
 			avatar: image(),
-			introduction: z.string(),
 			description: z.string(),
 			year: z.number(),
 			diploma: image(),
 			palmares: image(),
+			diploma_text: z.array(z.string()),
+			palmares_text: z.array(z.record(z.array(z.string()))),
 		}),
 });
 
