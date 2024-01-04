@@ -2,7 +2,7 @@
 first: Laoshi
 last: Shaman
 rank: Institutrice
-cover: ./portrait.jpg
+cover: ./photo4.jpg
 avatar: ./avatar.jpg
 diploma: ./diploma.jpg
 palmares: ./palmares.jpg
