@@ -1,35 +1,51 @@
 ---
+import BasicLink from '@components/links/BasicLink.astro';
 
+const schoolLinks = [
+	{ label: 'Informations pratiques', href: `/ecole#informations-pratiques` },
+	{ label: 'Actualités', href: `/actualites` },
+	{ label: 'Histoire', href: `/ecole#histoire` },
+	{ label: 'Partenariats', href: `/ecole/partenariats` },
+];
+
+const courseLinks = [
+	{ label: 'Planning', href: `/cours#planning` },
+	{ label: 'Tarifs', href: `/cours#tarifs` },
+	{ label: 'Enseignants', href: `/enseignants` },
+	{ label: 'Kung Fu', href: `/cours/kungfu` },
+	{ label: 'Shaolin Kids', href: `/cours/shaolin-kids` },
+	{ label: 'Täi-Chi Chuan', href: `/cours/taichi` },
+	{ label: 'Qi-Cong', href: `/cours/qicong` },
+	{ label: 'Méditation', href: `/cours/meditation` },
+	{ label: 'Boxe chinoise', href: `/cours/boxe` },
+	{ label: 'Préparation physique', href: `/cours/physique` },
+	{ label: 'Cours particuliers', href: `/cours/cours-particuliers` },
+	{ label: 'Cours en ligne', href: `/cours/en-ligne` },
+];
 ---
 
-<section class="grid grid-cols-2">
+<div>
+	<span class="font-bold uppercase">École</span>
+	<ul>
+		{
+			schoolLinks.map(({ href, label }) => (
+				<li>
+					<BasicLink {href} {label} />
+				</li>
+			))
+		}
+	</ul>
+</div>
 
-    <div>
-        <span>ÉCOLE</span>
-        <ul>
-            <li>....</li>
-            <li>....</li>
-            <li>....</li>
-            <li>....</li>
-            <li>....</li>
-        </ul>
-    </div>
-
-    <div>
-        <span>COURS</span>
-        <ul>
-            <li>....</li>
-            <li>....</li>
-            <li>....</li>
-            <li>....</li>
-            <li>....</li>
-            <li>....</li>
-            <li>....</li>
-            <li>....</li>
-            <li>....</li>
-            <li>....</li>
-            <li>....</li>
-            <li>....</li>
-        </ul>
-    </div>
-</section>
+<div>
+	<span class="font-bold uppercase">Cours</span>
+	<ul>
+		{
+			courseLinks.map(({ href, label }) => (
+				<li>
+					<BasicLink {href} {label} />
+				</li>
+			))
+		}
+	</ul>
+</div>

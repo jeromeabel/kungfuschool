@@ -2,15 +2,15 @@
 import SocialLinks from '@components/links/SocialLinks.astro';
 import SchoolInfos from '@components/SchoolInfos.astro';
 import SiteMap from '@components/SiteMap.astro';
-
-// const pages = await Astro.glob('../../pages/*');
-// console.log(pages);
+import Container from '@components/Container.astro';
 ---
 
 <footer class="border-t border-gray-500 bg-gradient-to-t from-[#ffe6006f] to-80% py-12">
-	<div class="container flex justify-between gap-8">
-		<SocialLinks />
-		<SchoolInfos />
-		<SiteMap />
-	</div>
+	<Container>
+		<div class="grid grid-cols-4">
+			<SocialLinks />
+			<SchoolInfos />
+			<SiteMap />
+		</div>
+	</Container>
 </footer>
