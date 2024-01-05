@@ -1,9 +1,6 @@
 ---
 name: 'École Dragon Tigre'
 cover: './cover.jpg'
-story:
-  - 'story-1.md'
-  - 'story-2.md'
 address:
   street: '354 Avenue Jean Guiton'
   zip: 17000

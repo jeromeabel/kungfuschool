@@ -21,7 +21,6 @@ const schoolCollection = defineCollection({
 				studentsPerYear: z.number(),
 				medals: z.number(),
 			}),
-			story: z.array(z.string()),
 			telephone: z.string(),
 			email: z.string(),
 			schedules: z.string(),
