@@ -5,8 +5,8 @@ import CTALink from '@components/links/CTALink.astro';
 import heroImg from '../../assets/hero.jpg';
 
 const baseURL = import.meta.env.BASE_URL;
-const subscribe = `${baseURL}/ecole`;
-const courses = `${baseURL}/cours`;
+const subscribeLink = `${baseURL}/ecole#informations-pratiques`;
+const coursesLink = `${baseURL}/cours`;
 ---
 
 <section class="relative h-[640px] overflow-hidden">
@@ -20,8 +20,8 @@ const courses = `${baseURL}/cours`;
 				>.
 			</p>
 			<div class="flex gap-8">
-				<CTALink label="S'inscrire" href={subscribe} />
-				<CTALink outline={true} label="Voir nos cours" href={courses} />
+				<CTALink label="S'inscrire" href={subscribeLink} />
+				<CTALink outline={true} label="Voir nos cours" href={coursesLink} />
 			</div>
 		</div>
 	</div>

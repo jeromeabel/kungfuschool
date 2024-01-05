@@ -23,6 +23,9 @@ export async function getStaticPaths() {
 
 const { entry } = Astro.props;
 const { Content } = await entry.render();
+
+const baseURL = import.meta.env.BASE_URL;
+const subscribeLink = `${baseURL}/ecole#informations-pratiques`;
 ---
 
 <Layout title={entry.data.title} description={entry.data.description}>
@@ -34,7 +37,7 @@ const { Content } = await entry.render();
 					<div class="prose prose-xl max-w-2xl text-white">
 						<Content />
 					</div>
-					<CTALink href="" label="S'inscrire" />
+					<CTALink href={subscribeLink} label="S'inscrire" />
 				</div>
 				<Icon name={entry.data.illustration} class="mt-8 max-h-[400px] flex-1" />
 			</div>
