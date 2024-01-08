@@ -16,7 +16,9 @@ const linkTeachers = `${baseURL}/enseignants`;
 	<p>La devise de l'école: "<em>Combats avec courage et conviction.</em>"</p>
 
 	<div class="my-8 grid max-w-full grid-cols-1 gap-8 xl:grid-cols-3">
-		<div class="flex items-stretch justify-center gap-1 md:gap-8 lg:items-center xl:col-span-2">
+		<div
+			class="flex flex-col items-stretch justify-center gap-1 md:flex-row md:gap-8 lg:items-center xl:col-span-2"
+		>
 			{
 				teachers.map(({ data, slug }) => (
 					<TeacherAvatar image={data.avatar} name={`${data.first} ${data.last}`} {slug} />
