@@ -1,8 +1,8 @@
 ---
-import { pricesOptions, pricesCards } from '@assets/data/prices';
+import { pricesCards } from '@assets/data/prices';
 import PriceCard from '@components/PriceCard.astro';
 ---
 
-<div class="flex items-end gap-8 py-8">
+<div class="grid grid-cols-1 items-end gap-8 py-8 md:grid-cols-2 xl:grid-cols-4">
 	{pricesCards.map((card, index) => <PriceCard {card} {index} />)}
 </div>

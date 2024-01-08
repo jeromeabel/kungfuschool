@@ -3,13 +3,13 @@ const { title, price, description } = Astro.props;
 ---
 
 <div class="flex flex-1 flex-col justify-between gap-6 rounded-2xl bg-slate-200 p-8 text-black">
-	<div class="">
-		<h4 class="text-2xl font-bold">{title}</h4>
-		<span class="text-6xl font-bold"
+	<div>
+		<h4 class="text-xl font-bold lg:text-2xl">{title}</h4>
+		<span class="text-4xl font-bold lg:text-6xl"
 			>{price}€
 			<span class="text-sm opacity-50">/séance</span>
 		</span>
-		<p class="">{description}</p>
+		<p class="mt-4">{description}</p>
 	</div>
 
 	<a

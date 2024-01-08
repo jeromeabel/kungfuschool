@@ -1,8 +1,9 @@
 ---
+import Icon from 'astro-icon';
+
 const { card, index } = Astro.props;
 
 import { pricesOptions } from '@assets/data/prices';
-import Icon from 'astro-icon';
 
 const css = [
 	'bg-slate-200',
@@ -22,13 +23,13 @@ const cssButton = isOutlined
 
 <div class={`flex flex-col flex-auto p-8 gap-6 h-fit rounded-2xl ${css[index]} text-black`}>
 	<div class="flex flex-col justify-between gap-4">
-		<div class="">
-			<h4 class="text-2xl font-bold">{card.title}</h4>
-			<span class="text-6xl font-bold"
+		<div>
+			<h4 class="text-xl font-bold lg:text-2xl">{card.title}</h4>
+			<span class="text-4xl font-bold lg:text-6xl"
 				>{card.price}€
 				<span class="text-sm opacity-50">/an</span>
 			</span>
-			<p class="">{card.subtitle}</p>
+			<p>{card.subtitle}</p>
 		</div>
 
 		<ul class="flex list-inside flex-col gap-2">

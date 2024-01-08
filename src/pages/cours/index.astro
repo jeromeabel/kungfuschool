@@ -66,8 +66,6 @@ const pricesSingle = ['private', 'meditation', 'samedi'].map((key) => pricesOpti
 			<PlanningWeek />
 		</Section>
 
-		<!--
-
 		<Section id="tarifs">
 			<H2>Tarifs <span class="text-2xl font-normal">à l'année</span></H2>
 			<PricesGrid />
@@ -75,13 +73,13 @@ const pricesSingle = ['private', 'meditation', 'samedi'].map((key) => pricesOpti
 
 		<Section>
 			<H2>Tarifs <span class="text-2xl font-normal">à la carte</span></H2>
-			<div class="flex gap-8 py-8">
+			<div class="grid grid-cols-1 gap-8 py-8 md:grid-cols-3">
 				{
 					pricesSingle.map(({ title, price, description }) => (
 						<PriceCardSmall {title} {price} {description} />
 					))
 				}
 			</div>
-		</Section> -->
+		</Section>
 	</Container>
 </Layout>
