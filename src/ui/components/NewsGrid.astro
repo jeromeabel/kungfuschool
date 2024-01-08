@@ -17,6 +17,6 @@ const news = (await getCollection('news'))
 const twcss = `md:grid-cols-${cols}`;
 ---
 
-<div class=`my-8 grid grid-cols-1 gap-8 ${twcss} lg:my-16`>
+<div class=`my-8 grid grid-cols-1 gap-12 ${twcss} lg:my-16 lg:gap-8`>
 	{news.map(({ data, slug }) => <NewsCard {data} {slug} {rounded} />)}
 </div>

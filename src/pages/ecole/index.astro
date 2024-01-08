@@ -37,16 +37,20 @@ const linkPaternships = `${baseURL}/ecole/partenariats`;
 		</Section>
 		<Section id="informations-pratiques">
 			<H2>Informations pratiques</H2>
-			<div class="grid grid-cols-2 gap-24">
-				<a href={school.address.openstreetmap} title="Ouvrir le plan" class="relative">
-					<Image src={school.address.imageMap} alt="Adresse de l'école" />
+			<div class="flex flex-col gap-8 lg:flex-row">
+				<a href={school.address.openstreetmap} title="Ouvrir le plan" class="relative lg:w-2/3">
+					<Image
+						src={school.address.imageMap}
+						alt="Adresse de l'école"
+						class="h-full object-cover"
+					/>
 					<div
 						class="group absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-0 text-white transition-all hover:bg-opacity-40"
 					>
 						<Icon name="mdi:magnify-plus" class="h-24 opacity-0 group-hover:opacity-100" />
 					</div>
 				</a>
-				<div class="flex flex-col gap-4">
+				<div class="flex flex-1 flex-row gap-16 lg:flex-col">
 					<SchoolInfos />
 					<SocialLinks />
 				</div>
