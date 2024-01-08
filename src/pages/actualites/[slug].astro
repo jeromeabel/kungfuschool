@@ -46,10 +46,14 @@ const currentNewsImages = allNewsImages
 	<Container>
 		<Section>
 			<H1>{entry.data.title}</H1>
-			<p class="mb-16 mt-4 text-2xl">{entry.data.headline}</p>
-			<Image src={entry.data.cover} alt={entry.data.title} class="h-[600px] object-cover" />
-			<div class="grid grid-cols-[1fr_4fr] gap-16 py-16">
-				<aside class="flex flex-col gap-8">
+			<p class="mb-8 mt-4 text-2xl lg:mb-16">{entry.data.headline}</p>
+			<Image
+				src={entry.data.cover}
+				alt={entry.data.title}
+				class="h-[300px] object-cover lg:h-[600px]"
+			/>
+			<div class="flex flex-col gap-8 py-8 lg:flex-row lg:gap-16 lg:py-16">
+				<aside class="flex justify-between gap-8 lg:w-1/4 lg:flex-col lg:justify-start">
 					<time class="first-letter:uppercase">{dateISOString}</time>
 					<ShareLinks title={entry.data.title} description={entry.data.description} />
 				</aside>
@@ -59,10 +63,16 @@ const currentNewsImages = allNewsImages
 			</div>
 		</Section>
 
-		<Section>
-			<div class="grid grid-cols-2 gap-8">
-				{currentNewsImages.map((img) => <Image src={img} alt="" />)}
-			</div>
-		</Section>
+		{
+			currentNewsImages.length > 0 ? (
+				<Section>
+					<div class="grid grid-cols-2 gap-8">
+						{currentNewsImages.map((img) => (
+							<Image src={img} alt="" />
+						))}
+					</div>
+				</Section>
+			) : null
+		}
 	</Container>
 </Layout>
