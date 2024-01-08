@@ -1,15 +1,16 @@
 ---
-import Container from '@components/Container.astro';
-import TestimonialCard from './TestimonialCard.astro';
 import { getCollection } from 'astro:content';
+
+import Container from '@components/Container.astro';
+import TestimonialCard from '@components/TestimonialCard.astro';
 
 const students = await getCollection('student');
 ---
 
-<section class="py-16">
+<section class="py-8 lg:py-16">
 	<Container>
 		<h2 class="uppercase">Témoignages</h2>
-		<div class="flex justify-between py-16">
+		<div class="flex flex-col items-start gap-16 py-8 lg:flex-row lg:items-stretch lg:py-16">
 			{
 				students.map(({ data }) => (
 					<TestimonialCard
