@@ -1,6 +1,5 @@
 ---
 import Section from '@components/Section.astro';
-import Container from '@components/Container.astro';
 import CTALink from '@components/links/CTALink.astro';
 import H2 from '@components/H2.astro';
 import NewsGrid from '@components/NewsGrid.astro';
@@ -17,9 +16,7 @@ const { nb = 2, cols = 2, rounded } = Astro.props;
 ---
 
 <Section>
-	<Container>
-		<H2>Actualités</H2>
-		<NewsGrid {nb} {cols} {rounded} />
-		<CTALink href={linkNews} label="Voir toutes les actualités" icon="carbon:arrow-right" outline />
-	</Container>
+	<H2>Actualités</H2>
+	<NewsGrid {nb} {cols} {rounded} />
+	<CTALink href={linkNews} label="Voir toutes les actualités" icon="carbon:arrow-right" outline />
 </Section>
