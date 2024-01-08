@@ -1,7 +1,7 @@
 ---
 import Icon from 'astro-icon';
 
-export interface Props {
+interface Props {
 	label: string;
 	href: string;
 	outline?: boolean;
@@ -20,11 +20,11 @@ const cssOutline = outline
 	class:list={[
 		{ 'rounded-full': rounded },
 		{ 'flex items-center gap-2': icon },
-		`max-w-max border border-white px-6 py-2 text-lg transition-all ${cssOutline}`,
+		`w-fit whitespace-nowrap break-keep border border-white px-4 py-2 text-lg transition-all lg:px-6 ${cssOutline}`,
 	]}
 	href={href}
-	aria-label={`${label} page`}
-	title={`${label} page`}
+	aria-label={`${label}`}
+	title={`${label}`}
 >
 	{label}
 	{icon ? <Icon size={24} name={icon} class="" /> : null}
