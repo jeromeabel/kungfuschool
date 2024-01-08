@@ -17,9 +17,9 @@ const linkTeacher = `${baseURL}/enseignants/${slug}`;
 
 <a href={linkTeacher} class="group flex flex-1 flex-col items-center gap-2">
 	<div
-		class="h-40 w-40 overflow-hidden rounded-full border-4 border-gold group-hover:border-white lg:h-48 lg:w-48"
+		class="h-32 w-32 overflow-hidden rounded-full border-4 border-gold group-hover:border-white md:h-40 md:w-40 lg:h-48 lg:w-48"
 	>
 		<Image src={image} alt={`Portrait de ${name}`} class="object-cover" />
 	</div>
-	<p class="text-lg font-bold">{name}</p>
+	<p class="text-base font-bold md:text-lg">{name}</p>
 </a>

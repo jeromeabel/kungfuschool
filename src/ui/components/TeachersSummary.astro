@@ -12,11 +12,11 @@ const linkTeachers = `${baseURL}/enseignants`;
 ---
 
 <Section>
-	<h2 class="uppercase">Un enseignement de qualité</h2>
+	<h2 class="text-2xl uppercase md:text-4xl">Un enseignement de qualité</h2>
 	<p>La devise de l'école: "<em>Combats avec courage et conviction.</em>"</p>
 
-	<div class="my-8 grid max-w-full gap-8 lg:grid-cols-3">
-		<div class="flex items-stretch justify-center gap-8 lg:col-span-2 lg:items-center">
+	<div class="my-8 grid max-w-full grid-cols-1 gap-8 xl:grid-cols-3">
+		<div class="flex items-stretch justify-center gap-1 md:gap-8 lg:items-center xl:col-span-2">
 			{
 				teachers.map(({ data, slug }) => (
 					<TeacherAvatar image={data.avatar} name={`${data.first} ${data.last}`} {slug} />

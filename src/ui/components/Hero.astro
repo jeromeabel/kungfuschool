@@ -14,14 +14,14 @@ const coursesLink = `${baseURL}/cours`;
 		class="grid place-items-center py-16 lg:place-items-start lg:bg-gradient-to-r lg:from-black lg:from-35% lg:p-16"
 	>
 		<div class="flex w-full max-w-lg flex-col gap-8 text-center lg:w-1/2 lg:text-start">
-			<h1>École <span class="lg:block">Dragon Tigre</span></h1>
+			<h1>École <span class="block lg:inline">Dragon Tigre</span></h1>
 			<p>
 				École de Kung-Fu Wushu traditionnel depuis plus de 20 ans à La Rochelle. Venez découvrir nos
 				différents cours, le <em>cours d'essai est gratuit</em> et l'<em
 					>inscription est possible toute l'année</em
 				>.
 			</p>
-			<div class="flex justify-center gap-8 lg:justify-start">
+			<div class="flex justify-center gap-2 lg:justify-start lg:gap-8">
 				<CTALink label="S'inscrire" href={subscribeLink} />
 				<CTALink outline={true} label="Voir nos cours" href={coursesLink} />
 			</div>
