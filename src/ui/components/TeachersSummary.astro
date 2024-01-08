@@ -14,8 +14,8 @@ const linkTeachers = `${baseURL}/enseignants`;
 	<h2 class="uppercase">Un enseignement de qualité</h2>
 	<p>La devise de l'école: "<em>Combats avec courage et conviction.</em>"</p>
 
-	<div class="my-8 flex flex-col gap-8 lg:flex-row">
-		<div class="flex items-center justify-evenly gap-4 md:gap-8">
+	<div class="my-8 grid gap-8 lg:grid-cols-3">
+		<div class="flex items-stretch justify-center lg:col-span-2 lg:items-center">
 			{
 				teachers.map(({ data, slug }) => (
 					<TeacherAvatar image={data.avatar} name={`${data.first} ${data.last}`} {slug} />

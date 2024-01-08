@@ -15,8 +15,10 @@ const baseURL = import.meta.env.BASE_URL;
 const linkTeacher = `${baseURL}/enseignants/${slug}`;
 ---
 
-<a href={linkTeacher} class="group flex flex-col items-center gap-2">
-	<div class="h-48 w-48 overflow-hidden rounded-full border-4 border-gold group-hover:border-white">
+<a href={linkTeacher} class="group flex flex-1 flex-col items-center gap-2">
+	<div
+		class="h-40 w-40 overflow-hidden rounded-full border-4 border-gold group-hover:border-white lg:h-48 lg:w-48"
+	>
 		<Image src={image} alt={`Portrait de ${name}`} class="object-cover" />
 	</div>
 	<p class="text-lg font-bold">{name}</p>
