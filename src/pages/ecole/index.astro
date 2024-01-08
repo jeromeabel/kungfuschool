@@ -28,16 +28,17 @@ const linkPaternships = `${baseURL}/ecole/partenariats`;
 	<Container>
 		<Section>
 			<H1>L'École</H1>
-			<p class="max-w-2xl pb-16 pt-8 text-xl">{school.intro}</p>
+			<p class="max-w-2xl pb-8 pt-8 lg:pb-16 lg:text-xl">{school.intro}</p>
 			<Image
 				src={school.cover}
-				class="h-[750px] object-cover"
+				class="h-[300px] object-cover lg:h-[750px]"
 				alt="Entrée de l'école boulevard Guiton à La Rochelle"
 			/>
 		</Section>
+
 		<Section id="informations-pratiques">
 			<H2>Informations pratiques</H2>
-			<div class="flex flex-col gap-8 lg:flex-row">
+			<div class="flex flex-col gap-4 md:gap-8 lg:flex-row">
 				<a href={school.address.openstreetmap} title="Ouvrir le plan" class="relative lg:w-2/3">
 					<Image
 						src={school.address.imageMap}
@@ -50,7 +51,7 @@ const linkPaternships = `${baseURL}/ecole/partenariats`;
 						<Icon name="mdi:magnify-plus" class="h-24 opacity-0 group-hover:opacity-100" />
 					</div>
 				</a>
-				<div class="flex flex-1 flex-row gap-16 lg:flex-col">
+				<div class="flex flex-1 flex-col gap-8 sm:flex-row md:gap-16 lg:flex-col">
 					<SchoolInfos />
 					<SocialLinks />
 				</div>

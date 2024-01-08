@@ -14,7 +14,7 @@ const news = (await getCollection('news'))
 	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 	.slice(0, nb);
 
-const twcss = `md:grid-cols-${cols}`;
+const twcss = `md:grid-cols-2 lg:grid-cols-${cols}`;
 ---
 
 <div class=`my-8 grid grid-cols-1 gap-12 ${twcss} lg:my-16 lg:gap-8`>
