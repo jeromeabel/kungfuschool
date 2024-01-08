@@ -6,6 +6,6 @@ import CourseCard2 from '@components/CourseCard2.astro';
 const courses = (await getCollection('course')).sort((a, b) => a.data.order - b.data.order);
 ---
 
-<div class=`my-16 grid grid-cols-3 gap-8`>
+<div class=`grid md:grid-cols-2 lg:grid-cols-3 gap-4 lg:gap-8`>
 	{courses.map((course) => <CourseCard2 {course} />)}
 </div>
