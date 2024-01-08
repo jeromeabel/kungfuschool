@@ -31,7 +31,7 @@ const subscribeLink = `${baseURL}/ecole#informations-pratiques`;
 <Layout title={entry.data.title} description={entry.data.description}>
 	<Container>
 		<Section>
-			<div class="flex gap-16">
+			<div class="flex flex-col-reverse gap-8 lg:flex-row lg:gap-16">
 				<div class="flex flex-1 flex-col gap-8">
 					<H1>{entry.data.title}</H1>
 					<div class="prose prose-xl max-w-2xl text-white">
