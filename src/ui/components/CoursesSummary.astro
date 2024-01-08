@@ -26,7 +26,7 @@ const courses = [
 ];
 ---
 
-<section class="flex gap-8 py-8">
+<section class="grid grid-rows-3 gap-4 py-4 md:grid-cols-3 lg:gap-8 lg:py-8">
 	{
 		courses.map(({ title1, title2, icon, description }) => (
 			<CourseCard {title1} {title2} {icon} {description} />
