@@ -30,7 +30,7 @@ const name = `${entry.data.first} ${entry.data.last}`;
 <Layout title={name} description={entry.data.description}>
 	<Container>
 		<Section>
-			<div class="flex">
+			<div class="flex flex-col-reverse gap-8 lg:flex-row">
 				<div class="flex flex-1 flex-col gap-8">
 					<H1>{name}</H1>
 					<div class="prose prose-xl max-w-2xl text-white">
@@ -47,7 +47,7 @@ const name = `${entry.data.first} ${entry.data.last}`;
 			</div>
 		</Section>
 		<Section>
-			<div class="flex-start flex gap-16">
+			<div class="flex-start flex flex-col-reverse gap-16 lg:flex-row">
 				<div class="flex-1">
 					<div class="flex items-center gap-3">
 						<Icon name="vaadin_diploma" class="h-8" />
@@ -65,7 +65,7 @@ const name = `${entry.data.first} ${entry.data.last}`;
 		</Section>
 
 		<Section>
-			<div class="flex-start flex gap-16">
+			<div class="flex-start flex flex-col-reverse gap-16 lg:flex-row">
 				<div class="flex-1">
 					<div class="flex items-center gap-3">
 						<Icon name="emojione-monotone_sports-medal" class="h-8" />
@@ -94,7 +94,7 @@ const name = `${entry.data.first} ${entry.data.last}`;
 		</Section>
 
 		<Section>
-			<div class="grid grid-cols-3 gap-8">
+			<div class="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3 lg:gap-8">
 				{entry.data.images.map((img) => <Image src={img} alt="" class="h-full object-cover" />)}
 			</div>
 		</Section>
