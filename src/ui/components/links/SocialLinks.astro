@@ -6,7 +6,7 @@ import IconLink from '@components/links/IconLink.astro';
 const { data } = await getEntry('school', 'dragontigre');
 ---
 
-<div>
+<div class="order-1">
 	<span class="mb-2 block font-bold uppercase">Nous suivre</span>
 	<div class="flex items-start gap-2">
 		{data.socials.map(({ label, href, icon }) => <IconLink {label} {href} {icon} />)}
