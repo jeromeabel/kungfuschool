@@ -3,11 +3,12 @@ import { getCollection } from 'astro:content';
 
 import Container from '@components/Container.astro';
 import TestimonialCard from '@components/TestimonialCard.astro';
+import Section from '@components/Section.astro';
 
 const students = await getCollection('student');
 ---
 
-<section class="py-8 lg:py-16">
+<Section>
 	<Container>
 		<h2 class="uppercase">Témoignages</h2>
 		<div class="flex flex-col items-start gap-16 py-8 lg:flex-row lg:items-stretch lg:py-16">
@@ -23,4 +24,4 @@ const students = await getCollection('student');
 			}
 		</div>
 	</Container>
-</section>
+</Section>

@@ -3,6 +3,7 @@ import { getCollection } from 'astro:content';
 
 import CTALink from '@components/links/CTALink.astro';
 import TeacherAvatar from '@components/TeacherAvatar.astro';
+import Section from '@components/Section.astro';
 
 const teachers = await getCollection('teacher');
 
@@ -10,12 +11,12 @@ const baseURL = import.meta.env.BASE_URL;
 const linkTeachers = `${baseURL}/enseignants`;
 ---
 
-<section class="my-8 lg:my-16">
+<Section>
 	<h2 class="uppercase">Un enseignement de qualité</h2>
 	<p>La devise de l'école: "<em>Combats avec courage et conviction.</em>"</p>
 
-	<div class="my-8 grid gap-8 lg:grid-cols-3">
-		<div class="flex items-stretch justify-center lg:col-span-2 lg:items-center">
+	<div class="my-8 grid max-w-full gap-8 lg:grid-cols-3">
+		<div class="flex items-stretch justify-center gap-8 lg:col-span-2 lg:items-center">
 			{
 				teachers.map(({ data, slug }) => (
 					<TeacherAvatar image={data.avatar} name={`${data.first} ${data.last}`} {slug} />
@@ -37,4 +38,4 @@ const linkTeachers = `${baseURL}/enseignants`;
 	</div>
 
 	<CTALink href={linkTeachers} label="En savoir plus" icon="carbon:arrow-right" outline />
-</section>
+</Section>
