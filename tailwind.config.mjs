@@ -22,6 +22,20 @@ export default {
 				22: 'repeat(22, minmax(0, 1fr))',
 				24: 'repeat(24, minmax(0, 1fr))',
 			},
+			animation: {
+				openmenu: 'openmenu 0.5s ease-in both',
+				closemenu: 'closemenu 0.5s ease-in both',
+			},
+			keyframes: {
+				openmenu: {
+					'0%': { top: '-400px' },
+					'100%': { top: '0px' },
+				},
+				closemenu: {
+					'0%': { top: '0px' },
+					'100%': { top: '-400px' },
+				},
+			},
 		},
 	},
 	plugins: [require('@tailwindcss/typography')],

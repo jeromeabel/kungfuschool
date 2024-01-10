@@ -1,6 +1,6 @@
 ---
-import NavLink from '@components/links/NavLink.astro';
-import CTALink from '@components/links/CTALink.astro';
+import NavMenu from '@components/NavMenu.astro';
+import NavMenuMobile from '@components/NavMenuMobile.astro';
 
 const baseURL = import.meta.env.BASE_URL;
 
@@ -12,15 +12,11 @@ const menu: { label: string; href: string }[] = [
 const CTA = { label: 'Nous contacter', href: `${baseURL}/ecole#informations-pratiques` };
 ---
 
-<nav class="hidden lg:block">
-	<ul class="flex justify-end gap-3 lg:gap-8">
-		{
-			menu.map(({ label, href }) => (
-				<li>
-					<NavLink {label} {href} />
-				</li>
-			))
-		}
-		<li><CTALink label={CTA.label} href={CTA.href} rounded /></li>
-	</ul>
+<nav class="">
+	<div class="hidden sm:block">
+		<NavMenu {menu} {CTA} />
+	</div>
+	<div class="sm:hidden">
+		<NavMenuMobile {menu} {CTA} />
+	</div>
 </nav>

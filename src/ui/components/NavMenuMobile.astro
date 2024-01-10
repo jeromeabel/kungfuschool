@@ -1,0 +1,89 @@
+---
+import NavLink from '@components/links/NavLink.astro';
+
+interface Props {
+	menu: { label: string; href: string }[];
+	CTA: { label: string; href: string };
+}
+
+const { menu, CTA } = Astro.props;
+---
+
+<button id="mobileMenuBtn" class="h-8 w-8">
+	<svg stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+		<path
+			stroke-linecap="round"
+			stroke-linejoin="round"
+			stroke-width="2"
+			d="M 4,6 H 20 M 4,12 H 20 M 4,18 h 16"
+		>
+		</path>
+	</svg>
+</button>
+
+<div
+	id="mobileMenu"
+	class="absolute -top-[500px] left-0 z-20 hidden w-full bg-white px-8 py-4 text-black"
+>
+	<div class="flex items-start justify-between">
+		<ul class="flex flex-col gap-8 py-8">
+			{
+				menu.map(({ label, href }) => (
+					<li>
+						<NavLink {label} {href} css="border-black text-2xl" />
+					</li>
+				))
+			}
+			<li class="my-2">
+				<a
+					id="btnContact"
+					class="w-fit whitespace-nowrap rounded-full border border-transparent bg-black px-6 py-2 text-2xl text-white transition-all hover:border-black hover:bg-white hover:text-black"
+					href={CTA.href}
+					aria-label={CTA.label}
+					title={CTA.label}
+				>
+					{CTA.label}
+				</a>
+			</li>
+		</ul>
+
+		<button id="mobileMenuBtnClose" class="h-10 w-10 stroke-black hover:stroke-gray-500">
+			<svg stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+				<path stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+			</svg>
+		</button>
+	</div>
+</div>
+
+<script>
+	const menuBtnOpen = document.getElementById('mobileMenuBtn');
+	const menuBtnClose = document.getElementById('mobileMenuBtnClose');
+	const btnContact = document.getElementById('btnContact');
+	const menu = document.getElementById('mobileMenu');
+	const main = document.querySelector('main');
+	const body = document.body;
+
+	menuBtnOpen?.addEventListener('click', openActions);
+	menuBtnClose?.addEventListener('click', closeActions);
+	btnContact?.addEventListener('click', closeActions);
+
+	function openActions() {
+		body.classList.add('max-h-screen');
+		body.classList.add('overflow-hidden');
+		main?.classList.add('opacity-50');
+		main?.classList.add('blur');
+		menu?.classList.remove('hidden');
+		menu?.classList.add('animate-openmenu');
+		menu?.classList.remove('animate-closemenu');
+	}
+
+	function closeActions() {
+		body.classList.remove('max-h-screen');
+		body.classList.remove('overflow-hidden');
+		main?.classList.remove('opacity-50');
+		main?.classList.remove('blur');
+		// menu?.classList.add('hidden');
+		menu?.classList.remove('animate-openmenu');
+		menu?.classList.add('animate-closemenu');
+	}
+</script>

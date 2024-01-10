@@ -1,0 +1,22 @@
+---
+import NavLink from '@components/links/NavLink.astro';
+import CTALink from '@components/links/CTALink.astro';
+
+interface Props {
+	menu: { label: string; href: string }[];
+	CTA: { label: string; href: string };
+}
+
+const { menu, CTA } = Astro.props;
+---
+
+<ul class="flex justify-end gap-3 lg:gap-8">
+	{
+		menu.map(({ label, href }) => (
+			<li>
+				<NavLink {label} {href} />
+			</li>
+		))
+	}
+	<li><CTALink label={CTA.label} href={CTA.href} rounded /></li>
+</ul>
