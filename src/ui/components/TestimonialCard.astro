@@ -5,8 +5,8 @@ const { name, image, year, text } = Astro.props;
 ---
 
 <div class="flex flex-1 flex-col items-center justify-between gap-8 md:flex-row lg:flex-col">
-	<div class="h-36 w-36 min-w-36 overflow-hidden rounded-full lg:row-span-1">
-		<Image src={image} alt={`Portrait de ${name}`} width={400} class="h-full w-full object-cover" />
+	<div class="h-36 w-36 min-w-36 overflow-hidden rounded-full">
+		<Image src={image} alt={`Portrait de ${name}`} width={400} class="object-cover" />
 	</div>
 	<blockquote class="max-w-md ps-8">
 		<svg
