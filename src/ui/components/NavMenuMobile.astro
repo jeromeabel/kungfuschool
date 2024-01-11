@@ -9,7 +9,7 @@ interface Props {
 const { menu, CTA } = Astro.props;
 ---
 
-<button id="mobileMenuBtn" class="h-8 w-8">
+<button id="mobileMenuBtn" class="h-8 w-8" aria-label="Open Menu">
 	<svg stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
 		<path
 			stroke-linecap="round"
@@ -47,7 +47,11 @@ const { menu, CTA } = Astro.props;
 			</li>
 		</ul>
 
-		<button id="mobileMenuBtnClose" class="h-10 w-10 stroke-black hover:stroke-gray-500">
+		<button
+			id="mobileMenuBtnClose"
+			class="h-10 w-10 stroke-black hover:stroke-gray-500"
+			aria-label="Close Menu"
+		>
 			<svg stroke="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
 				<path stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
 			</svg>
