@@ -1,10 +1,11 @@
 ---
 import { Image } from 'astro:assets';
 
-const { data, slug, nb, rounded = false } = Astro.props;
+const { data, slug, cols, rounded = false } = Astro.props;
 
 const baseURL = import.meta.env.BASE_URL;
 const linkNews = `${baseURL}/actualites/${slug}`;
+const newWidth = 1440 / cols;
 ---
 
 <a href={linkNews} title=`Ouvrir l'actualité "${data.title}"` class="hover:opacity-70">
@@ -12,7 +13,7 @@ const linkNews = `${baseURL}/actualites/${slug}`;
 		<Image
 			src={data.cover}
 			alt={data.title}
-			width={1440 / nb}
+			width={newWidth}
 			class:list={['h-96 object-cover object-top', { rounded: rounded }]}
 		/>
 		<div>
