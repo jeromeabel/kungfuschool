@@ -16,10 +16,9 @@ const coursesLink = `${baseURL}/cours`;
 		<div class="flex w-full max-w-lg flex-col gap-8 text-center lg:w-1/2 lg:text-start">
 			<h1>École <span class="block lg:inline">Dragon Tigre</span></h1>
 			<p>
-				École de Kung-Fu Wushu traditionnel depuis plus de 20 ans à La Rochelle. Venez découvrir nos
-				différents cours, le <em>cours d'essai est gratuit</em> et l'<em
-					>inscription est possible toute l'année</em
-				>.
+				École de Kung-Fu traditionnel depuis plus de 20 ans à La Rochelle. Le <em
+					>cours d'essai est gratuit</em
+				> et l'<em>inscription est possible toute l'année</em>.
 			</p>
 			<div class="flex justify-center gap-2 lg:justify-start lg:gap-8">
 				<CTALink label="S'inscrire" href={subscribeLink} />
@@ -31,8 +30,9 @@ const coursesLink = `${baseURL}/cours`;
 	<Image
 		src={heroImg}
 		alt="Cours de Tai-Chi dans l'école Dragon Tigre"
-		class="hidden lg:absolute lg:inset-0 lg:-z-10 lg:block lg:object-cover"
+		class="hidden lg:absolute lg:inset-0 lg:-z-10 lg:block lg:w-full"
 		loading="eager"
+		width={1440}
 	/>
 </section>
 <style is:global>
