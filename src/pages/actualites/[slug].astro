@@ -8,6 +8,7 @@ import Section from '@components/Section.astro';
 import Container from '@components/Container.astro';
 import Prose from '@components/Prose.astro';
 import ShareLinks from '@components/links/ShareLinks.astro';
+import CustomImage from '@components/CustomImage.astro';
 
 interface Props {
 	entry: CollectionEntry<'news'>;
@@ -32,12 +33,13 @@ const dateOptions: Intl.DateTimeFormatOptions = {
 };
 const dateISOString = new Date(entry.data.date).toLocaleDateString('fr-FR', dateOptions);
 
-const allNewsImages = await Astro.glob('../../assets/*.jpg');
+// Get filename from cover property
+const coverName = entry.data.cover.src.split('.')[0].split('/').pop() || 'cover';
 
-//const allNewsImages = await Astro.glob('../../content/news/*/*.{jpg,JPG,jpeg,png,PNG}');
-const currentNewsImages = allNewsImages
-	.map((img) => img.default)
-	.filter((img) => img.src.includes(entry.slug) && !img.src.includes(entry.data.cover.src));
+// Filter out images from the news folder
+const images = Object.keys(
+	import.meta.glob('/src/content/news/*/*.{jpg,JPG,jpeg,JPEG,png,PNG}', { eager: true }),
+).filter((src) => !src.includes(coverName) && src.includes(entry.slug));
 ---
 
 <Layout
@@ -52,7 +54,7 @@ const currentNewsImages = allNewsImages
 			<Image
 				src={entry.data.cover}
 				alt={entry.data.title}
-				class="h-[300px] object-cover lg:h-[600px]"
+				class="lg:max-h-[800px] lg:object-cover"
 				width="1440"
 				loading="eager"
 			/>
@@ -68,11 +70,11 @@ const currentNewsImages = allNewsImages
 		</Section>
 
 		{
-			allNewsImages.length > 0 ? (
+			images.length > 0 ? (
 				<Section>
 					<div class="grid grid-cols-2 gap-8">
-						{allNewsImages.map((img) => (
-							<Image src={img.default} alt="" />
+						{images.map((path) => (
+							<CustomImage imagePath={path} width={700} />
 						))}
 					</div>
 				</Section>
