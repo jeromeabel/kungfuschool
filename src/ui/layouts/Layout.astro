@@ -21,14 +21,14 @@ const { title, description, publishedDate, image } = Astro.props;
 const baseURL = import.meta.env.BASE_URL;
 const fontwoff = `${baseURL}/fonts/shanghai.woff`;
 const fontwoff2 = `${baseURL}/fonts/shanghai.woff2`;
-// const sitemap = `${baseURL}/sitemap-index.xml`;
+const sitemap = `${baseURL}/sitemap-index.xml`;
 ---
 
 <html lang="fr" class="scroll-smooth">
 	<head>
 		<SEO page={title} {description} {publishedDate} {image} />
 		<link rel="preload" href={fontwoff2} as="font" type="font/woff2" crossorigin />
-		<!-- <link rel="sitemap" href={sitemap} /> -->
+		<link rel="sitemap" href={sitemap} />
 	</head>
 	<body class="grid min-h-screen grid-rows-[auto_1fr_auto] bg-black text-white">
 		<Header />
