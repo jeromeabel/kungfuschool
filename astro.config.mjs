@@ -8,8 +8,8 @@ export default defineConfig({
 	// Git Actions
 	base: '/kungfuschool',
 	integrations: [tailwind(), sitemap()],
-	build: {
-		assets: 'assets',
-		assetsPrefix: 'https://jeromeabel.github.io/kungfuschool',
-	},
+	// build: {
+	// 	assets: 'assets',
+	// 	assetsPrefix: 'https://jeromeabel.github.io/kungfuschool',
+	// },
 });
