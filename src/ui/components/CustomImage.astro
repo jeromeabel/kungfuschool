@@ -5,12 +5,10 @@ import { Image } from 'astro:assets';
 interface Props {
 	imagePath: string;
 	alt?: string;
-	name?: string;
-	age?: number;
 	width?: number;
 }
 
-const { imagePath, alt = '', name = 'Jean-Pierre', age = 10, width = 1440 } = Astro.props;
+const { imagePath, alt = '', width = 1440 } = Astro.props;
 const images = import.meta.glob<{ default: ImageMetadata }>(
 	'/src/content/*/*/*.{jpg,JPG,jpeg,JPEG,png,PNG}',
 );

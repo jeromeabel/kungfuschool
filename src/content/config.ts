@@ -60,8 +60,8 @@ const teachersCollection = defineCollection({
 			year: z.number(),
 			diploma: image(),
 			palmares: image(),
-			diploma_text: z.array(z.string()).optional(),
-			palmares_text: z.array(z.record(z.array(z.string()))).optional(),
+			diploma_text: z.array(z.string()),
+			palmares_text: z.array(z.record(z.array(z.string()))),
 			images: z.array(image()),
 		}),
 });
