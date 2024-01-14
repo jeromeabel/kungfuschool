@@ -10,7 +10,7 @@ interface Props {
 }
 const { nb = 2, cols = 2, rounded } = Astro.props;
 
-const news = (await getCollection('news'))
+const news = (await getCollection('blog'))
 	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
 	.slice(0, nb);
 

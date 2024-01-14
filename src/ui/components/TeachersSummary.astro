@@ -4,16 +4,38 @@ import { getCollection } from 'astro:content';
 import CTALink from '@components/links/CTALink.astro';
 import TeacherAvatar from '@components/TeacherAvatar.astro';
 import Section from '@components/Section.astro';
+import { Image } from 'astro:assets';
 
 const teachers = await getCollection('teacher');
 
 const baseURL = import.meta.env.BASE_URL;
-const linkTeachers = `${baseURL}/enseignants`;
+const linkTeachers = `${baseURL}/teachers`;
 ---
 
 <Section>
-	<h2 class="text-2xl uppercase md:text-4xl">Un enseignement de qualité</h2>
-	<p>La devise de l'école: "<em>Combats avec courage et conviction.</em>"</p>
+	<h2 class="text-2xl uppercase md:text-4xl">Learn with experts</h2>
+	<p>The school motto: "<em>Self-mastery, respect for others, perfection of movement</em>"</p>
+
+	<div class="mt-8 flex flex-col justify-evenly gap-16 md:flex-row md:gap-8">
+		{
+			teachers.map(({ data, slug }) => (
+				<a
+					href={`${linkTeachers}/${slug}`}
+					class="group relative flex flex-1 flex-col items-center gap-4 overflow-hidden  "
+				>
+					<Image
+						src={data.cover}
+						alt={`Portrait de ${data.first} ${data.last}`}
+						class="aspect-video bg-white object-cover transition-all duration-300 group-hover:scale-105"
+					/>
+					<p class=" absolute bottom-2 left-2  bg-black bg-opacity-80 px-4 py-2 text-lg  text-white ">
+						{data.first} {data.last}
+					</p>
+				</a>
+			))
+		}
+	</div>
+	<!-- 			
 
 	<div class="my-8 grid max-w-full grid-cols-1 gap-8 xl:grid-cols-3">
 		<div
@@ -36,8 +58,5 @@ const linkTeachers = `${baseURL}/enseignants`;
 				Kung Fu et Taïji.
 			</p>
 			<p>L’enseignement s’adapte à chacun et est accessible à tous les âges de 7 à 117 ans !</p>
-		</div>
-	</div>
-
-	<CTALink href={linkTeachers} label="En savoir plus" icon="carbon:arrow-right" outline />
+		</div> -->
 </Section>

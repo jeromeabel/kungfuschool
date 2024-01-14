@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   width="300"
+   height="300"
+   viewBox="0 0 79.375 79.375"
+   version="1.1"
+   id="svg8"
+   sodipodi:docname="favicon2_inkscape.svg"
+   inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs12" />
+  <sodipodi:namedview
+     id="namedview10"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     inkscape:pagecheckerboard="0"
+     showgrid="false"
+     inkscape:zoom="0.67339908"
+     inkscape:cx="-6.6825158"
+     inkscape:cy="61.627646"
+     inkscape:window-width="1920"
+     inkscape:window-height="1029"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg8" />
+  <circle
+     cx="39.687"
+     cy="39.687"
+     r="39.688"
+     paint-order="stroke fill markers"
+     id="circle2" />
+  <g
+     aria-label="术"
+     id="g4739"
+     style="font-size:215.844px;line-height:1.25;fill:#666666;stroke-width:0.22374"
+     transform="matrix(1.1844106,0,0,1.1844106,-8.3633126,-1.5781688)">
+    <path
+       d="m 14.984966,28.950779 c 13.382328,9.497136 30.434003,23.526996 38.636075,32.376599 L 65.924149,49.671803 C 57.290389,41.038043 40.022869,27.871559 26.640542,18.806112 Z"
+       id="path4737"
+       sodipodi:nodetypes="ccccc"
+       style="fill:#666666;stroke-width:0.22374" />
+  </g>
+  <g
+     aria-label="术"
+     id="text6"
+     style="font-size:215.844px;line-height:1.25;fill:#ffffff;stroke-width:0.22374"
+     transform="matrix(1.1844106,0,0,1.1844106,-7.9894156,-7.9178972)">
+    <path
+       d="m 14.984966,28.950779 c 13.382328,9.497136 30.434003,23.526996 38.636075,32.376599 L 65.924149,49.671803 C 57.290389,41.038043 40.022869,27.871559 26.640542,18.806112 Z"
+       id="path2369"
+       sodipodi:nodetypes="ccccc"
+       style="stroke-width:0.22374" />
+  </g>
+</svg>

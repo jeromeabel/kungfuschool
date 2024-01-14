@@ -3,9 +3,32 @@ import Nav from '@components/Nav.astro';
 import LogoLink from '@components/links/LogoLink.astro';
 ---
 
-<header>
-	<div class="container flex items-center justify-between gap-8 py-4 lg:py-8">
+<header
+	id="nav-header"
+	class="fixed z-20 h-28 w-full border-b border-transparent bg-black bg-opacity-0 text-white transition-all duration-300"
+>
+	<div class="container flex h-full items-center justify-between gap-8">
 		<LogoLink />
 		<Nav />
 	</div>
 </header>
+
+<script>
+	document.addEventListener('DOMContentLoaded', function () {
+		const menu = document.getElementById('nav-header');
+
+		window.addEventListener('scroll', function () {
+			if (window.scrollY > 50) {
+				menu?.classList.remove('h-28');
+				menu?.classList.add('h-20');
+				menu?.classList.add('bg-opacity-90');
+				menu?.classList.add('border-white');
+			} else {
+				menu?.classList.remove('bg-opacity-90');
+				menu?.classList.remove('h-20');
+				menu?.classList.add('h-28');
+				menu?.classList.remove('border-white');
+			}
+		});
+	});
+</script>

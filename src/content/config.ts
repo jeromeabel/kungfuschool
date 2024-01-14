@@ -60,8 +60,8 @@ const teachersCollection = defineCollection({
 			year: z.number(),
 			diploma: image(),
 			palmares: image(),
-			diploma_text: z.array(z.string()),
-			palmares_text: z.array(z.record(z.array(z.string()))),
+			diploma_text: z.array(z.string()).optional(),
+			palmares_text: z.array(z.record(z.array(z.string()))).optional(),
 			images: z.array(image()),
 		}),
 });
@@ -78,7 +78,7 @@ const studentsCollection = defineCollection({
 		}),
 });
 
-const newsCollection = defineCollection({
+const blogCollection = defineCollection({
 	type: 'content',
 	schema: ({ image }) =>
 		z.object({
@@ -95,5 +95,5 @@ export const collections = {
 	course: coursesCollection,
 	teacher: teachersCollection,
 	student: studentsCollection,
-	news: newsCollection,
+	blog: blogCollection,
 };

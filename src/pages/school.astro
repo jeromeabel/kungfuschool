@@ -1,0 +1,99 @@
+---
+import { Image } from 'astro:assets';
+import { getEntry } from 'astro:content';
+import { Icon } from 'astro-icon';
+
+import Layout from '@layouts/Layout.astro';
+import H1 from '@components/H1.astro';
+import H2 from '@components/H2.astro';
+import Prose from '@components/Prose.astro';
+import Section from '@components/Section.astro';
+import Container from '@components/Container.astro';
+import SchoolInfos from '@components/SchoolInfos.astro';
+import SocialLinks from '@components/links/SocialLinks.astro';
+import CTALink from '@components/links/CTALink.astro';
+import NewsGridSummary from '@components/NewsGridSummary.astro';
+
+import PaternshipImg from '@assets/salute.png';
+
+const entry = await getEntry('school', 'kungfuschool');
+
+const { data: school } = entry;
+
+const baseURL = import.meta.env.BASE_URL;
+const linkPaternships = `${baseURL}/school/partenariats`;
+---
+
+<Layout title="School">
+	<Container>
+		<Section>
+			<H1>The School</H1>
+			<p class="max-w-2xl pb-8 pt-8 lg:pb-16 lg:text-xl">{school.intro}</p>
+			<Image src={school.cover} class="h-[300px] object-cover lg:h-[750px]" alt="Inside" />
+		</Section>
+
+		<Section id="infos">
+			<H2>Informations</H2>
+			<div class="flex flex-col gap-4 md:gap-8 lg:flex-row">
+				<a href={school.address.openstreetmap} title="Open the map" class="relative lg:w-2/3">
+					<Image src={school.address.imageMap} alt="School's map" class="h-full object-cover" />
+					<div
+						class="group absolute inset-0 z-10 flex items-center justify-center bg-black bg-opacity-0 text-white transition-all hover:bg-opacity-40"
+					>
+						<Icon name="mdi:magnify-plus" class="h-24 opacity-0 group-hover:opacity-100" />
+					</div>
+				</a>
+				<div class="flex flex-1 flex-col gap-8 sm:flex-row md:gap-16 lg:flex-col">
+					<SchoolInfos />
+					<SocialLinks />
+				</div>
+			</div>
+		</Section>
+
+		<Section id="about">
+			<H2>School's Story</H2>
+
+			<div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-16">
+				<Prose>
+					<p>
+						Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magni aspernatur,
+						distinctio beatae nam dolorum et facilis unde, tempore in expedita? Harum molestiae
+						adipisci sapiente ipsa accusantium ducimus ea laboriosam?
+					</p>
+					<p>
+						Tenetur aperiam sit iste optio. Officiis a saepe molestiae blanditiis itaque voluptas,
+						cumque veritatis omnis culpa accusamus labore facere laudantium eaque, aperiam
+						voluptatum dignissimos ducimus libero ipsum architecto commodi! Necessitatibus.
+					</p>
+				</Prose>
+				<Prose>
+					<p>
+						Vitae, quod quis. Reiciendis, officiis! Natus blanditiis, saepe nobis excepturi soluta
+						repellendus amet iste explicabo ratione temporibus dolorem autem aliquid, beatae nisi ex
+						modi aliquam molestias? Debitis laborum rem excepturi!
+					</p>
+					<p>
+						Facere magni magnam delectus possimus aliquam fuga omnis suscipit. Eveniet ad optio
+						ipsam in impedit eius ratione error explicabo, nisi modi nesciunt tempora saepe
+						quibusdam aliquam alias maxime? Voluptates, at?
+					</p>
+				</Prose>
+			</div>
+		</Section>
+
+		<Section>
+			<H2>Our Partners</H2>
+			<div class="mb-8 grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-16">
+				<Prose>
+					<p>
+						Vitae, quod quis. Reiciendis, officiis! Natus blanditiis, saepe nobis excepturi soluta
+						repellendus amet iste explicabo ratione temporibus dolorem autem aliquid, beatae nisi ex
+						modi aliquam molestias? Debitis laborum rem excepturi!
+					</p>
+				</Prose>
+
+				<Image src={PaternshipImg} alt="Palm and fist salute" />
+			</div>
+		</Section>
+	</Container>
+</Layout>

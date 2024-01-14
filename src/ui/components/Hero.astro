@@ -5,39 +5,26 @@ import CTALink from '@components/links/CTALink.astro';
 import heroImg from '@assets/hero.jpg';
 
 const baseURL = import.meta.env.BASE_URL;
-const subscribeLink = `${baseURL}/ecole#informations-pratiques`;
-const coursesLink = `${baseURL}/cours`;
+const subscribeLink = `${baseURL}/school#infos`;
+const coursesLink = `${baseURL}/courses`;
 ---
 
-<section class="relative overflow-hidden text-xl lg:max-h-[640px]">
-	<div
-		class="grid place-items-center py-16 lg:place-items-start lg:bg-gradient-to-r lg:from-black lg:from-35% lg:p-16"
-	>
-		<div class="flex w-full max-w-lg flex-col gap-8 text-center lg:w-1/2 lg:text-start">
-			<h1>École <span class="block lg:inline">Dragon Tigre</span></h1>
-			<p>
-				École de Kung-Fu traditionnel depuis plus de 20 ans à La Rochelle. Le <em
-					>cours d'essai est gratuit</em
-				> et l'<em>inscription est possible toute l'année</em>.
-			</p>
-			<div class="flex justify-center gap-2 lg:justify-start lg:gap-8">
-				<CTALink label="S'inscrire" href={subscribeLink} />
-				<CTALink outline={true} label="Voir nos cours" href={coursesLink} />
+<section class="relative h-screen max-h-[900px] bg-gradient-to-r from-black from-20%">
+	<div class="grid h-full items-center">
+		<div class="container flex flex-col gap-4">
+			<h1 class="text-6xl uppercase tracking-wider">Kung Fu School</h1>
+			<p class="max-w-xl text-4xl">Experience the ancient art of self-defense and inner calm</p>
+			<div class="mt-8 flex gap-4">
+				<CTALink label="Register Now" href={subscribeLink} />
+				<CTALink outline={true} label="Check Our Courses" href={coursesLink} />
 			</div>
 		</div>
 	</div>
-
 	<Image
 		src={heroImg}
-		alt="Cours de Tai-Chi dans l'école Dragon Tigre"
-		class="hidden lg:absolute lg:inset-0 lg:-z-10 lg:block lg:w-full"
-		loading="eager"
-		width={1440}
+		alt=""
+		class="absolute inset-0 -z-10 h-full w-full object-cover"
+		loading="lazy"
+		aria-hidden="true"
 	/>
 </section>
-<style is:global>
-	em {
-		font-weight: bold;
-		font-style: normal;
-	}
-</style>

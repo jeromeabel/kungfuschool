@@ -4,11 +4,11 @@ import { Image } from 'astro:assets';
 const { data, slug, cols, rounded = false } = Astro.props;
 
 const baseURL = import.meta.env.BASE_URL;
-const linkNews = `${baseURL}/actualites/${slug}`;
+const linkNews = `${baseURL}/blog/${slug}`;
 const newWidth = 1440 / cols;
 ---
 
-<a href={linkNews} title=`Ouvrir l'actualité "${data.title}"` class="hover:opacity-70">
+<a href={linkNews} title=`Open "${data.title}"` class="hover:opacity-70">
 	<article class="flex h-full flex-col gap-4">
 		<Image
 			src={data.cover}

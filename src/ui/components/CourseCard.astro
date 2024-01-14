@@ -1,30 +1,31 @@
 ---
 import { Icon } from 'astro-icon';
 export interface Props {
-	title1: string;
-	title2: string;
+	title: string;
 	description: string;
 	icon: string;
 }
 
-const { title1, title2, description, icon } = Astro.props;
+const { title, description, icon } = Astro.props;
 
 const baseURL = import.meta.env.BASE_URL;
 const linkCourse = `${baseURL}/cours/${icon}`;
+//	class="flex flex-1 flex-col gap-6 border border-black bg-white p-4 text-black hover:bg-black hover:text-white lg:gap-8 lg:p-8"
 ---
 
 <a
-	class="flex flex-1 flex-col gap-6 border border-white bg-white p-4 text-black hover:bg-black hover:text-white lg:gap-8 lg:p-8"
+	class="group flex flex-1 flex-col gap-8 overflow-hidden border hover:border-gold lg:gap-8"
 	href={linkCourse}
 >
-	<div class="h-44 lg:h-52">
+	<div
+		class="h-44 pt-8 text-white transition-all group-hover:scale-110 group-hover:text-gold lg:h-52"
+	>
 		<Icon name={icon} class="h-full w-full" />
 	</div>
-	<div>
-		<h2 class="text-center text-2xl lg:text-4xl">
-			{title1}
-			<span class="hidden lg:block">{title2}</span>
+	<div class="flex flex-col gap-4 bg-white px-6 py-8 text-black">
+		<h2 class="text-center font-title text-2xl uppercase tracking-wider lg:text-4xl">
+			{title}
 		</h2>
-		<p class="hidden text-lg lg:mt-4 lg:block">{description}</p>
+		<p class="hidden text-lg lg:block">{description}</p>
 	</div>
 </a>

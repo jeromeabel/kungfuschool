@@ -2,30 +2,27 @@
 import BasicLink from '@components/links/BasicLink.astro';
 
 const schoolLinks = [
-	{ label: 'Informations pratiques', href: `/ecole#informations-pratiques` },
-	{ label: 'Actualités', href: `/actualites` },
-	{ label: 'Histoire', href: `/ecole#histoire` },
-	{ label: 'Partenariats', href: `/ecole/partenariats` },
+	{ label: 'Informations', href: `/school#infos` },
+	{ label: 'Blog', href: `/blog` },
+	{ label: 'About', href: `/school#about` },
+	// { label: 'Partenariats', href: `/school/partenariats` },
 ];
 
 const courseLinks = [
-	{ label: 'Planning', href: `/cours#planning` },
-	{ label: 'Tarifs', href: `/cours#tarifs` },
-	{ label: 'Enseignants', href: `/enseignants` },
-	{ label: 'Kung Fu', href: `/cours/kungfu` },
-	{ label: 'Shaolin Kids', href: `/cours/shaolin-kids` },
-	{ label: 'Täi-Chi Chuan', href: `/cours/taichi` },
-	{ label: 'Qi-Cong', href: `/cours/qicong` },
-	{ label: 'Méditation', href: `/cours/meditation` },
-	{ label: 'Boxe chinoise', href: `/cours/boxe` },
-	{ label: 'Préparation physique', href: `/cours/physique` },
-	{ label: 'Cours particuliers', href: `/cours/cours-particuliers` },
-	{ label: 'Cours en ligne', href: `/cours/en-ligne` },
+	{ label: 'Planning', href: `/courses#planning` },
+	{ label: 'Prices', href: `/courses#prices` },
+	{ label: 'Teachers', href: `/teachers` },
+	{ label: 'Kung Fu', href: `/courses/kungfu` },
+	{ label: 'Kids', href: `/courses/kids` },
+	{ label: 'Tai Chi', href: `/courses/taichi` },
+	{ label: 'Qi Gong', href: `/courses/qigong` },
+	{ label: 'Méditation', href: `/courses/meditation` },
+	{ label: 'Sanda', href: `/courses/sanda` },
 ];
 ---
 
 <div>
-	<span class="font-bold uppercase">École</span>
+	<span class="font-bold uppercase">School</span>
 	<ul>
 		{
 			schoolLinks.map(({ href, label }) => (
@@ -38,7 +35,7 @@ const courseLinks = [
 </div>
 
 <div>
-	<span class="font-bold uppercase">Cours</span>
+	<span class="font-bold uppercase">Courses</span>
 	<ul>
 		{
 			courseLinks.map(({ href, label }) => (

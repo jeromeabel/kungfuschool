@@ -5,14 +5,15 @@ import NavMenuMobile from '@components/NavMenuMobile.astro';
 const baseURL = import.meta.env.BASE_URL;
 
 const menu: { label: string; href: string }[] = [
-	{ label: 'Accueil', href: `${baseURL}` },
-	{ label: 'École', href: `${baseURL}/ecole` },
-	{ label: 'Cours', href: `${baseURL}/cours` },
+	{ label: 'Home', href: `${baseURL}` },
+	{ label: 'School', href: `${baseURL}/school` },
+	{ label: 'Courses', href: `${baseURL}/courses` },
+	{ label: 'Blog', href: `${baseURL}/blog` },
 ];
-const CTA = { label: 'Nous contacter', href: `${baseURL}/ecole#informations-pratiques` };
+const CTA = { label: 'Contact us', href: `${baseURL}/school#infos` };
 ---
 
-<nav class="">
+<nav>
 	<div class="hidden sm:block">
 		<NavMenu {menu} {CTA} />
 	</div>

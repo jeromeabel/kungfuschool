@@ -3,33 +3,28 @@ import CourseCard from '@components/CourseCard.astro';
 
 const courses = [
 	{
-		title1: `Tai-Chi`,
-		title2: `& Qi-Cong`,
-		icon: 'taichi',
+		title: `Tai Chi`,
+		icon: 'silhouette_taichi',
 		description:
-			'Art martial Chinois interne tiré du Kung Fu. Né au 14 ème siècle pendant la dynastie Ming et remanié pendant la révolution culturelle, il est également un art de santé.',
+			'Internal Chinese martial art derived from Kung Fu. Born in the 14th century during the Ming dynasty and remodeled during the Cultural Revolution, it is also a health art.',
 	},
 	{
-		title1: 'Kung Fu',
-		title2: '& Shaolin Kids',
-		icon: 'kungfu',
+		title: 'Kung Fu',
+		icon: 'silhouette_kungfu',
 		description:
-			'Le Kung Fu Wushu est né en Chine il y a plus de 4000 ans. Il est le père des Arts Martiaux. Il existe plus de 1500 styles différents, le nôtre s’appelle le Shi Dong Wu.',
+			'Kung Fu Wushu originated in China more than 4000 years ago. He is the father of Martial Arts. There are over 1500 different styles, ours is called Shi Dong Wu.',
 	},
 	{
-		title1: 'Boxe chinoise',
-		title2: '& Physique',
-		icon: 'boxe',
+		title: 'Sanda',
+		icon: 'silhouette_sanda',
 		description:
-			'L’art du combat Chinois est un art de pieds-poings avec des projections et balayages, pour la version compétition. En combat libre et d’école le Kung Fu s’exprime dans l’intégralité de ses techniques',
+			'The art of Chinese combat is an art of foot-fists with throws and sweeps, for the competition version. In free and school combat, Kung Fu is expressed in all of its techniques',
 	},
 ];
 ---
 
-<section class="flex flex-col gap-4 py-4 md:flex-row lg:gap-8 lg:py-8">
-	{
-		courses.map(({ title1, title2, icon, description }) => (
-			<CourseCard {title1} {title2} {icon} {description} />
-		))
-	}
+<section class="bg-gradient-to-r from-black">
+	<div class="container flex flex-col gap-4 py-4 md:flex-row lg:gap-8 lg:py-8">
+		{courses.map(({ title, icon, description }) => <CourseCard {title} {icon} {description} />)}
+	</div>
 </section>

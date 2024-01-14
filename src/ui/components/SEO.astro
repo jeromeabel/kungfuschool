@@ -18,15 +18,15 @@ const defaultImage: ImageMetadata = {
 };
 
 const {
-	page = 'Accueil',
-	description = 'Institut de Kung Fu Traditionnel à La Rochelle : style Shi Dong Wu de Shaolin Sud, Taiji, Qi Gong, self defense, méditation et renforcement physique.',
+	page = 'Home',
+	description = 'Institut de Kung Fu Traditionnel à Paris : style Shi Dong Wu de Shaolin Sud, Taiji, Qi Gong, self defense, méditation et renforcement physique.',
 	image = defaultImage,
 	publishedDate = new Date(),
 } = Astro.props;
 
-const favicon = `${baseURL}/favicon.svg`;
+const favicon = `${baseURL}/favicon2.svg`;
 
-const title = `${page} - Dragon Tigre`;
+const title = `${page} - Kung Fu School`;
 const canonicalWebsiteURL = new URL(Astro.url.pathname, Astro.site);
 const publishedDateString = publishedDate.toISOString().slice(0, 10);
 const socialImageURL = new URL(image.src, Astro.url);

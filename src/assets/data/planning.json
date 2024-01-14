@@ -81,7 +81,7 @@
 	],
 	"vendredi": [
 		{
-			"title": "Taï-Chi Chuan - Armes",
+			"title": "Taï-Chi Chuan",
 			"slug": "taichi",
 			"level": "Tous niveaux",
 			"hours": "18h - 19h"
@@ -93,7 +93,7 @@
 			"hours": "19h - 20h"
 		},
 		{
-			"title": "Méditation guidée",
+			"title": "Méditation",
 			"slug": "meditation",
 			"level": "5€ / séance",
 			"hours": "20h15 - 21h"
@@ -101,9 +101,9 @@
 	],
 	"samedi": [
 		{
-			"title": "Cours privés de perfectionnement",
+			"title": "Stages d'initiation et de perfectionnement",
 			"slug": "cours-particuliers",
-			"level": "dirigés par Laoshi Shaman",
+			"level": "Tous niveaux",
 			"hours": "17h - 22h"
 		}
 	]

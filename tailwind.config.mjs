@@ -6,7 +6,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				title: ['Shanghai', ...defaultTheme.fontFamily.serif],
+				title: ['Houji', ...defaultTheme.fontFamily.serif],
 				sans: ['Inter', ...defaultTheme.fontFamily.sans],
 			},
 			colors: {
