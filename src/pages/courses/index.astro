@@ -4,6 +4,7 @@ import Container from '@components/Container.astro';
 import Section from '@components/Section.astro';
 import H1 from '@components/H1.astro';
 import H2 from '@components/H2.astro';
+import Separator from '@components/Separator.astro';
 
 import CoursesGrid from '@components/courses/CoursesGrid.astro';
 import PlanningWeek from '@components/planning/PlanningWeek.astro';
@@ -25,13 +26,15 @@ import { pricesCardsSingle, pricesCardsYearly } from '@assets/data/prices';
 			<CoursesGrid />
 		</Section>
 
-		<Section id="planning">
+		<Separator id="planning" />
+		<Section>
 			<h2 class="font-bold uppercase">Planning</h2>
 			<p class="font-bold">From 2023-09-10 to 2024-06-30</p>
 			<PlanningWeek />
 		</Section>
 
-		<Section id="prices">
+		<Separator id="prices" />
+		<Section>
 			<H2>Pricing <span class="text-2xl font-normal">/ membership</span></H2>
 			<div class="grid grid-cols-1 items-end gap-8 py-8 md:grid-cols-3">
 				{pricesCardsYearly.map((card, index) => <PriceCard {card} {index} />)}

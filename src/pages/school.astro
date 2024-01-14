@@ -11,6 +11,7 @@ import Section from '@components/Section.astro';
 import Container from '@components/Container.astro';
 import SchoolInfos from '@components/school/SchoolInfos.astro';
 import SocialLinks from '@components/links/SocialLinks.astro';
+import Separator from '@components/Separator.astro';
 
 import PaternshipImg from '@assets/salute.png';
 
@@ -27,7 +28,7 @@ const { data: school } = entry;
 			<Image src={school.cover} class="h-[300px] object-cover lg:h-[750px]" alt="Inside" />
 		</Section>
 
-		<hr id="infos" class="mb-14 border-transparent" />
+		<Separator id="infos" />
 		<Section>
 			<H2>Informations</H2>
 			<div class="mt-8 flex flex-col gap-4 md:gap-8 lg:flex-row">
@@ -46,10 +47,9 @@ const { data: school } = entry;
 			</div>
 		</Section>
 
-		<hr id="about" class="mb-14 border-transparent" />
+		<Separator id="about" />
 		<Section>
 			<H2>About</H2>
-
 			<div class="grid grid-cols-1 gap-8 pt-8 lg:grid-cols-3 lg:gap-16">
 				<Prose>
 					<p>
