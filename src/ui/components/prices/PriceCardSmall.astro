@@ -5,10 +5,7 @@ const { title, price, description } = Astro.props;
 <div class="flex flex-1 flex-col justify-between gap-6 rounded-2xl bg-slate-200 p-8 text-black">
 	<div>
 		<h3 class="text-xl font-bold lg:text-2xl">{title}</h3>
-		<span class="text-4xl font-bold lg:text-6xl"
-			>{price}€
-			<span class="text-sm text-gray-600">/séance</span>
-		</span>
+		<span class="text-4xl font-bold lg:text-6xl">{price}€</span>
 		<p class="mt-4">{description}</p>
 	</div>
 
@@ -16,6 +13,6 @@ const { title, price, description } = Astro.props;
 		rel="noopener noreferrer"
 		href="#"
 		class="rounded-full border border-transparent bg-white px-6 py-2 text-center font-semibold text-black hover:bg-black hover:text-white"
-		>Choisir</a
+		>Select</a
 	>
 </div>

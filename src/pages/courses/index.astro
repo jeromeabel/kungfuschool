@@ -1,50 +1,28 @@
 ---
-import { Image } from 'astro:assets';
-
 import Layout from '@layouts/Layout.astro';
 import Container from '@components/Container.astro';
 import Section from '@components/Section.astro';
 import H1 from '@components/H1.astro';
 import H2 from '@components/H2.astro';
-
-import CoursesGrid from '@components/CoursesGrid.astro';
-import PlanningWeek from '@components/PlanningWeek.astro';
-import PricesGrid from '@components/PricesGrid.astro';
-
-import imageCours from '@assets/courses.jpg';
-
-import { pricesOptions } from '@assets/data/prices';
-import PriceCardSmall from '@components/PriceCardSmall.astro';
 import Prose from '@components/Prose.astro';
 
-const pricesSingle = ['private', 'meditation', 'samedi'].map((key) => pricesOptions[key]);
-//console.log(Object.entries(pricesOptions).slice(4));
+import CoursesGrid from '@components/courses/CoursesGrid.astro';
+import PlanningWeek from '@components/planning/PlanningWeek.astro';
+import PriceCardSmall from '@components/prices/PriceCardSmall.astro';
+import PriceCard from '@components/prices/PriceCard.astro';
+
+import { pricesCardsSingle, pricesCardsYearly } from '@assets/data/prices';
 ---
 
 <Layout title="Courses">
 	<Container>
 		<Section>
 			<H1>Courses</H1>
-			<div class="flex flex-col-reverse gap-8 pt-8 lg:flex-row lg:gap-16">
-				<Prose>
-					<p>
-						Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi nihil nostrum ut aperiam
-						fuga eligendi, ea adipisci sit provident? Quaerat natus doloribus repudiandae temporibus
-						omnis, fugiat libero suscipit illo vero.
-					</p>
-				</Prose>
-
-				<div class="flex-1">
-					<Image
-						src={imageCours}
-						class="h-full object-cover"
-						alt="Entrée de l'école boulevard Guiton à La Rochelle"
-					/>
-				</div>
-			</div>
-		</Section>
-
-		<Section>
+			<p class="max-w-2xl pb-8 pt-4 lg:pb-16 lg:text-xl">
+				Ut, pariatur? Corrupti alias sequi aspernatur ratione repudiandae similique. Error animi
+				totam eos quae mod i, iusto ipsa architecto tempore sequi id magnam fuga expedita fugit et
+				quisquam. Suscipit, totam ratione?
+			</p>
 			<CoursesGrid />
 		</Section>
 
@@ -54,16 +32,18 @@ const pricesSingle = ['private', 'meditation', 'samedi'].map((key) => pricesOpti
 			<PlanningWeek />
 		</Section>
 
-		<Section id="tarifs">
-			<H2>Prices <span class="text-2xl font-normal">yearly</span></H2>
-			<PricesGrid />
+		<Section id="prices">
+			<H2>Pricing <span class="text-2xl font-normal">/ membership</span></H2>
+			<div class="grid grid-cols-1 items-end gap-8 py-8 md:grid-cols-3">
+				{pricesCardsYearly.map((card, index) => <PriceCard {card} {index} />)}
+			</div>
 		</Section>
 
 		<Section>
-			<H2>Prices <span class="text-2xl font-normal">single</span></H2>
+			<H2>Pricing <span class="text-2xl font-normal"> / single course</span></H2>
 			<div class="grid grid-cols-1 gap-8 py-8 md:grid-cols-3">
 				{
-					pricesSingle.map(({ title, price, description }) => (
+					pricesCardsSingle.map(({ title, price, description }) => (
 						<PriceCardSmall {title} {price} {description} />
 					))
 				}

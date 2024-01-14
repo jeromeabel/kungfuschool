@@ -7,7 +7,7 @@ const [dayString, dayData] = day;
 
 <div class="flex flex-col lg:flex-row lg:items-center">
 	<p class="text-2xl uppercase lg:w-[150px] xl:w-[180px]">{dayString}</p>
-	<div class="grid flex-1 grid-cols-22 border border-stone-600">
+	<div class="grid-cols-18 grid flex-1 border border-stone-600">
 		{dayData.map((course: any, index: number) => <PlanningCourse {course} first={index === 0} />)}
 	</div>
 </div>

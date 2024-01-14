@@ -1,5 +1,5 @@
 ---
-import Nav from '@components/Nav.astro';
+import Nav from '@components/nav/Nav.astro';
 import LogoLink from '@components/links/LogoLink.astro';
 ---
 
@@ -20,14 +20,18 @@ import LogoLink from '@components/links/LogoLink.astro';
 		window.addEventListener('scroll', function () {
 			if (window.scrollY > 50) {
 				menu?.classList.remove('h-28');
+				menu?.classList.remove('bg-opacity-0');
+				menu?.classList.remove('border-transparent');
 				menu?.classList.add('h-20');
 				menu?.classList.add('bg-opacity-90');
 				menu?.classList.add('border-white');
 			} else {
-				menu?.classList.remove('bg-opacity-90');
 				menu?.classList.remove('h-20');
-				menu?.classList.add('h-28');
+				menu?.classList.remove('bg-opacity-90');
 				menu?.classList.remove('border-white');
+				menu?.classList.add('h-28');
+				menu?.classList.add('bg-opacity-0');
+				menu?.classList.add('border-transparent');
 			}
 		});
 	});

@@ -5,66 +5,62 @@ interface PriceOption {
 }
 
 export const pricesOptions: Record<string, PriceOption> = {
-	tenue: {
-		title: "Tenue de l'école (obligatoire)",
+	suit: {
+		title: 'School suit (required)',
 		price: 50,
 	},
-	licence: {
-		title: 'Licence compétition',
+	license: {
+		title: 'Competition license',
 		price: 7,
 	},
-	cours: {
-		title: 'Cours supplémentaire',
+	course: {
+		title: 'Extra class',
 		price: 50,
 	},
-	visio: {
-		title: 'Visio-conférence Zoom',
+	online: {
+		title: 'Zoom video conference',
 		price: 50,
-	},
-	private: {
-		title: 'Cours particuliers',
-		price: 50,
-		description: 'Dirigés par Laoshi Shaman. Pour les non adhérents, ajoutez 10€.',
-	},
-	meditation: {
-		title: 'Méditation',
-		price: 5,
-		description: 'Guidée le samedi',
-	},
-	samedi: {
-		title: 'Samedi',
-		price: 5,
-		description: "Cours collectif pour tous d'une heure",
 	},
 };
 
-export const pricesCards = [
+export const pricesCardsYearly = [
 	{
-		title: 'Shaoling Kids',
-		subtitle: 'Entre 7 et 11 ans',
-		price: 193,
-		content: ['1 cours par semaine', 'Licence fédérale'],
-		options: ['tenue'],
+		title: 'Kids',
+		subtitle: 'Between 7 and 11 years old',
+		price: 200,
+		content: ['1 course / week', 'Federal license'],
+		options: ['suit'],
 	},
 	{
 		title: 'Premium',
-		subtitle: 'À partir de 12 ans et de la 3ème année',
-		price: 343,
-		content: ['Tous les cours', 'Licence fédérale'],
-		options: ['tenue', 'licence', 'visio'],
+		subtitle: 'From 12 years old and 3rd year',
+		price: 350,
+		content: ['All courses', 'Federal license'],
+		options: ['suit', 'license', 'online'],
 	},
 	{
-		title: 'Découverte',
-		subtitle: 'À partir de 12 ans',
-		price: 233,
-		content: ['1 cours par semaine', 'Licence fédérale'],
-		options: ['tenue', 'cours', 'licence', 'visio'],
+		title: 'Discovery',
+		subtitle: 'From 12 years old',
+		price: 250,
+		content: ['1 course / week', 'Federal license'],
+		options: ['suit', 'course', 'license', 'online'],
+	},
+];
+
+export const pricesCardsSingle = [
+	{
+		title: 'Private course',
+		price: 50,
+		description: 'With Laoshi',
 	},
 	{
-		title: 'À distance',
-		subtitle: 'Visio-conférence Zoom',
-		price: 100,
-		content: ['Tous les cours'],
-		options: [],
+		title: 'Meditation',
+		price: 5,
+		description: 'Friday',
+	},
+	{
+		title: 'Saturday',
+		price: 5,
+		description: 'Collective course 1h',
 	},
 ];

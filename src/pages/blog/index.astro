@@ -3,13 +3,13 @@ import Layout from '@layouts/Layout.astro';
 import H1 from '@components/H1.astro';
 import Section from '@components/Section.astro';
 import Container from '@components/Container.astro';
-import NewsGrid from '@components/NewsGrid.astro';
+import NewsGrid from '@components/blog/NewsGrid.astro';
 ---
 
-<Layout title="Actualités">
+<Layout title="Blog">
 	<Container>
 		<Section>
-			<H1>Actualités</H1>
+			<H1>Blog</H1>
 			<NewsGrid nb={50} cols={3} />
 		</Section>
 	</Container>

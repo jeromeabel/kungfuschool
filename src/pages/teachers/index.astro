@@ -1,30 +1,27 @@
 ---
 import { getCollection } from 'astro:content';
+import { Image } from 'astro:assets';
 
 import Layout from '@layouts/Layout.astro';
 import Container from '@components/Container.astro';
 import Section from '@components/Section.astro';
 import H1 from '@components/H1.astro';
-import { Image } from 'astro:assets';
-import Prose from '@components/Prose.astro';
 
 const teachers = await getCollection('teacher');
 
 const baseURL = import.meta.env.BASE_URL;
-const linkTeachers = `${baseURL}/enseignants`;
-//aspect-square rounded-full bg-white object-cover p-1
+const linkTeachers = `${baseURL}/teachers`;
 ---
 
-<Layout title="Enseignants">
+<Layout title="Teachers">
 	<Container>
 		<Section>
-			<H1>Enseignants</H1>
-			<Prose>
-				<p class="text-xl">
-					Les cours sont assurés par les maîtres Hrod Romero (Shifu) et Shasha Romero (Simu),
-					assistés par l’institutrice Shaman Romero (Laoshi).
-				</p>
-			</Prose>
+			<H1>Teachers</H1>
+			<p class="max-w-2xl pt-4 lg:text-xl">
+				Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nam veniam, ad odio adipisci
+				blanditiis quod cumque. Inventore voluptates quos culpa obcaecati expedita ducimus, cumque
+				reiciendis facilis ea sunt optio adipisci.
+			</p>
 		</Section>
 
 		<Section>
@@ -37,7 +34,7 @@ const linkTeachers = `${baseURL}/enseignants`;
 						>
 							<Image
 								src={data.cover}
-								alt={`Portrait de ${data.first} ${data.last}`}
+								alt={`${data.first} ${data.last}'s portrait`}
 								class="aspect-square w-4/5 rounded-full bg-white object-cover p-1 md:w-full"
 							/>
 							<p class="text-lg font-bold md:text-2xl">

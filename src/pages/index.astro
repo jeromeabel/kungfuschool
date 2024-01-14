@@ -1,23 +1,18 @@
 ---
 import Layout from '@layouts/Layout.astro';
-import Container from '@components/Container.astro';
 import Hero from '@components/Hero.astro';
-import CoursesSummary from '@components/CoursesSummary.astro';
-import TeachersSummary from '@components/TeachersSummary.astro';
-import SchoolInfosSummary from '@components/SchoolInfosSummary.astro';
-import TestimonialsSummary from '@components/TestimonialsSummary.astro';
-import NewsGridSummary from '@components/NewsGridSummary.astro';
+import CoursesSummary from '@components/courses/CoursesSummary.astro';
+import TeachersSummary from '@components/teachers/TeachersSummary.astro';
+import SchoolInfosSummary from '@components/school/SchoolInfosSummary.astro';
+import TestimonialsSummary from '@components/students/TestimonialsSummary.astro';
+import NewsGridSummary from '@components/blog/NewsGridSummary.astro';
 ---
 
 <Layout>
 	<Hero />
 	<CoursesSummary />
-	<Container>
-		<TeachersSummary />
-	</Container>
+	<TeachersSummary />
 	<SchoolInfosSummary />
 	<TestimonialsSummary />
-	<Container>
-		<NewsGridSummary nb={2} cols={2} />
-	</Container>
+	<NewsGridSummary />
 </Layout>

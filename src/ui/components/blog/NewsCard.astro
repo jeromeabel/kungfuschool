@@ -1,0 +1,32 @@
+---
+import { Image } from 'astro:assets';
+
+const { data, slug, cols, rounded = false } = Astro.props;
+
+const baseURL = import.meta.env.BASE_URL;
+const linkNews = `${baseURL}/blog/${slug}`;
+const newWidth = 1440 / cols;
+---
+
+<a href={linkNews} title=`Open "${data.title}"` class="group relative rounded">
+	<article class="flex h-full flex-col gap-4">
+		<div class="h-96 overflow-hidden rounded">
+			<Image
+				src={data.cover}
+				alt={data.title}
+				width={newWidth}
+				class:list={[
+					'h-full  object-cover object-top transition-all group-hover:scale-105',
+					{ rounded: rounded },
+				]}
+			/>
+		</div>
+		<div class="absolute bottom-2 left-2 rounded bg-black bg-opacity-85">
+			<h2 class="px-2 py-1 text-lg lg:text-xl">
+				<span class="font-medium"> {data.title}</span>
+				<span class="text-gray-500">|</span>
+				{data.date.getFullYear()}
+			</h2>
+		</div>
+	</article>
+</a>

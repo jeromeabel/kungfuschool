@@ -1,110 +1,96 @@
 {
-	"lundi": [
+	"monday": [
 		{
-			"title": "Kung Fu",
+			"title": "Kung Fu 1",
 			"slug": "kungfu",
-			"level": "1ère année",
-			"hours": "18h - 19h30"
+			"level": "1st year",
+			"hours": "6:00 PM - 7:30 PM"
 		},
 		{
-			"title": "Kung Fu",
+			"title": "Kung Fu 2",
 			"slug": "kungfu",
-			"level": "3ème année et plus",
-			"hours": "19h30 - 21h"
-		},
-		{
-			"title": "Kung Fu",
-			"slug": "kungfu",
-			"level": "3ème année et plus",
-			"hours": "21h - 22h30"
+			"level": "2nd year and above",
+			"hours": "7:30 PM - 9:00 PM"
 		}
 	],
-	"mardi": [
+	"tuesday": [
 		{
-			"title": "Préparation physique",
+			"title": "Physical Training",
 			"slug": "physique",
-			"level": "Tous niveaux",
-			"hours": "18h - 19h15"
+			"level": "All levels",
+			"hours": "6:00 PM - 7:15 PM"
 		},
 		{
-			"title": "Boxe chinoise",
+			"title": "Sanda",
 			"slug": "boxe",
-			"level": "Tous niveaux",
-			"hours": "19h15 - 20h30"
+			"level": "All levels",
+			"hours": "7:15 PM - 8:30 PM"
 		},
 		{
-			"title": "Compétition",
-			"slug": "boxe",
-			"level": "3ème année et plus",
-			"hours": "20h30 - 22h"
+			"title": "Kung Fu 3",
+			"slug": "kungfu",
+			"level": "3rd year and above",
+			"hours": "8:30 PM - 10:00 PM"
 		}
 	],
-	"mercredi": [
+	"wednesday": [
 		{
-			"title": "Shaolin Kids",
-			"slug": "shaolin-kids",
-			"level": "7/11 ans",
-			"hours": "17h - 18h"
+			"title": "Kids",
+			"slug": "kids",
+			"level": "7-11 years old",
+			"hours": "5:00 PM - 6:00 PM"
 		},
 		{
-			"title": "Kung Fu",
+			"title": "Kung Fu 1",
 			"slug": "kungfu",
-			"level": "1ere année",
-			"hours": "18h - 19h30"
+			"level": "1st year",
+			"hours": "6:00 PM - 7:30 PM"
 		},
 		{
-			"title": "Kung Fu",
+			"title": "Kung Fu 2",
 			"slug": "kungfu",
-			"level": "3ème année et plus",
-			"hours": "19h30 - 21h"
+			"level": "2nd year and above",
+			"hours": "7:30 PM - 9:00 PM"
 		}
 	],
-	"jeudi": [
+	"thursday": [
 		{
-			"title": "Qi Cong",
-			"slug": "qicong",
-			"level": "Tous niveaux",
-			"hours": "18h - 19h"
+			"title": "Qi Gong",
+			"slug": "qigong",
+			"level": "All levels",
+			"hours": "6:00 PM - 7:00 PM"
 		},
 		{
-			"title": "Taï-Chi Chuan",
+			"title": "Tai Chi Chuan",
 			"slug": "taichi",
-			"level": "Tous niveaux",
-			"hours": "19h - 20h"
+			"level": "All levels",
+			"hours": "7:00 PM - 8:00 PM"
 		},
 		{
-			"title": "Kung Fu",
+			"title": "Kung Fu 3",
 			"slug": "kungfu",
-			"level": "1ère année",
-			"hours": "20h - 21h30"
+			"level": "3rd year and above",
+			"hours": "8:00 PM - 9:30 PM"
 		}
 	],
-	"vendredi": [
+	"friday": [
 		{
-			"title": "Taï-Chi Chuan",
+			"title": "Qi Gong",
+			"slug": "qigong",
+			"level": "All levels",
+			"hours": "6:00 PM - 7:00 PM"
+		},
+		{
+			"title": "Tai Chi Chuan",
 			"slug": "taichi",
-			"level": "Tous niveaux",
-			"hours": "18h - 19h"
+			"level": "All levels",
+			"hours": "7:00 PM - 8:00 PM"
 		},
 		{
-			"title": "Qi Cong",
-			"slug": "qicong",
-			"level": "Tous niveaux",
-			"hours": "19h - 20h"
-		},
-		{
-			"title": "Méditation",
+			"title": "Meditation",
 			"slug": "meditation",
-			"level": "5€ / séance",
-			"hours": "20h15 - 21h"
-		}
-	],
-	"samedi": [
-		{
-			"title": "Stages d'initiation et de perfectionnement",
-			"slug": "cours-particuliers",
-			"level": "Tous niveaux",
-			"hours": "17h - 22h"
+			"level": "€5 per session",
+			"hours": "8:00 PM - 9:00 PM"
 		}
 	]
 }

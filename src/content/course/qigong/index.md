@@ -1,10 +1,10 @@
 ---
 order: 3
-title: 'Qi Cong'
+title: 'Qi Gong'
 type: 'yearly'
 description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur'
 cover: './cover.jpg'
-illustration: 'qicong'
+illustration: 'qigong'
 ---
 
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur eos quia voluptatibus velit eius debitis. Facilis expedita quas impedit doloribus, eum veniam nam? Magnam provident numquam nesciunt?

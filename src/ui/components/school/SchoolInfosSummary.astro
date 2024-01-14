@@ -1,33 +1,34 @@
 ---
 import { getEntry } from 'astro:content';
 import Container from '@components/Container.astro';
+import H2 from '@components/H2.astro';
 
 const { data } = await getEntry('school', 'kungfuschool');
 ---
 
 <section class="border-white bg-white py-8 text-black lg:py-16">
 	<Container>
-		<h2 class="text-2xl uppercase md:text-4xl">Overview</h2>
+		<H2>Overview</H2>
 		<div
 			class="my-4 grid grid-cols-2 items-start gap-8 lg:my-16 lg:grid-cols-4 lg:justify-evenly lg:gap-16"
 		>
-			<div class="lg:text-center">
+			<div class="border-s ps-4 lg:text-center">
 				<h3 class="mb-1 text-xl md:mb-4 md:text-2xl">Since</h3><span
 					class="text-2xl font-bold md:text-4xl lg:text-6xl">{data.infos.date.getFullYear()}</span
 				>
 			</div>
-			<div class="lg:text-center">
+			<div class="border-s ps-4 lg:text-center">
 				<h3 class="mb-1 text-xl md:mb-4 md:text-2xl">Students</h3><span
 					class="whitespace-nowrap text-2xl font-bold md:text-4xl lg:text-6xl"
 					>{data.infos.studentsPerYear}<span class="text-xl">/ year</span></span
 				>
 			</div>
-			<div class="lg:text-center">
+			<div class="border-s ps-4 lg:text-center">
 				<h3 class="mb-1 text-xl md:mb-4 md:text-2xl">Medals</h3><span
 					class="text-2xl font-bold md:text-4xl lg:text-6xl">{data.infos.medals}</span
 				>
 			</div>
-			<div class="lg:text-center">
+			<div class="border-s ps-4 lg:text-center">
 				<h3 class="mb-1 text-xl md:mb-4 md:text-2xl">Room</h3><span
 					class="whitespace-nowrap text-2xl font-bold md:text-4xl lg:text-6xl"
 					>{data.infos.surface}<span class="text-xl">m<sup>2</sup></span></span

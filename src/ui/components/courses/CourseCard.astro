@@ -1,24 +1,24 @@
 ---
 import { Icon } from 'astro-icon';
-export interface Props {
+interface Props {
 	title: string;
 	description: string;
 	icon: string;
+	slug: string;
 }
 
-const { title, description, icon } = Astro.props;
+const { title, description, icon, slug } = Astro.props;
 
 const baseURL = import.meta.env.BASE_URL;
-const linkCourse = `${baseURL}/cours/${icon}`;
-//	class="flex flex-1 flex-col gap-6 border border-black bg-white p-4 text-black hover:bg-black hover:text-white lg:gap-8 lg:p-8"
+const linkCourse = `${baseURL}/courses/${slug}`;
 ---
 
 <a
-	class="group flex flex-1 flex-col gap-8 overflow-hidden border hover:border-gold lg:gap-8"
+	class="group flex flex-1 flex-col gap-8 overflow-hidden border border-gray-500 text-white hover:border-white lg:gap-8"
 	href={linkCourse}
 >
 	<div
-		class="h-44 pt-8 text-white transition-all group-hover:scale-110 group-hover:text-gold lg:h-52"
+		class="h-72 p-8 drop-shadow-[0_35px_35px_rgba(255,255,255,0.25)] transition-all group-hover:scale-105"
 	>
 		<Icon name={icon} class="h-full w-full" />
 	</div>

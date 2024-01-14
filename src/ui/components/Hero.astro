@@ -2,6 +2,8 @@
 import { Image } from 'astro:assets';
 
 import CTALink from '@components/links/CTALink.astro';
+import Container from '@components/Container.astro';
+
 import heroImg from '@assets/hero.jpg';
 
 const baseURL = import.meta.env.BASE_URL;
@@ -9,16 +11,22 @@ const subscribeLink = `${baseURL}/school#infos`;
 const coursesLink = `${baseURL}/courses`;
 ---
 
-<section class="relative h-screen max-h-[900px] bg-gradient-to-r from-black from-20%">
-	<div class="grid h-full items-center">
-		<div class="container flex flex-col gap-4">
-			<h1 class="text-6xl uppercase tracking-wider">Kung Fu School</h1>
-			<p class="max-w-xl text-4xl">Experience the ancient art of self-defense and inner calm</p>
-			<div class="mt-8 flex gap-4">
-				<CTALink label="Register Now" href={subscribeLink} />
-				<CTALink outline={true} label="Check Our Courses" href={coursesLink} />
+<section class="relative h-screen max-h-[900px] bg-gradient-to-b from-black from-5%">
+	<div
+		class="grid h-full items-center bg-[radial-gradient(ellipse_at_left,_var(--tw-gradient-stops))] from-black from-0% to-transparent to-70%"
+	>
+		<Container>
+			<div class="flex max-w-xl flex-col gap-4">
+				<h1 class="text-6xl uppercase tracking-widest">Kung Fu School</h1>
+				<p class="text-4xl tracking-wide">
+					Experience the ancient art of self-defense and inner calm
+				</p>
+				<div class="mt-8 flex gap-4">
+					<CTALink label="Register Now" href={subscribeLink} />
+					<CTALink outline={true} label="Check Our Courses" href={coursesLink} />
+				</div>
 			</div>
-		</div>
+		</Container>
 	</div>
 	<Image
 		src={heroImg}

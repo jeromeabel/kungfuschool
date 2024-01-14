@@ -1,21 +1,26 @@
 ---
-import CourseCard from '@components/CourseCard.astro';
+import Container from '@components/Container.astro';
+import Section from '@components/Section.astro';
+import CourseCard from '@components/courses/CourseCard.astro';
 
 const courses = [
 	{
 		title: `Tai Chi`,
+		slug: 'taichi',
 		icon: 'silhouette_taichi',
 		description:
 			'Internal Chinese martial art derived from Kung Fu. Born in the 14th century during the Ming dynasty and remodeled during the Cultural Revolution, it is also a health art.',
 	},
 	{
 		title: 'Kung Fu',
+		slug: 'kungfu',
 		icon: 'silhouette_kungfu',
 		description:
 			'Kung Fu Wushu originated in China more than 4000 years ago. He is the father of Martial Arts. There are over 1500 different styles, ours is called Shi Dong Wu.',
 	},
 	{
 		title: 'Sanda',
+		slug: 'sanda',
 		icon: 'silhouette_sanda',
 		description:
 			'The art of Chinese combat is an art of foot-fists with throws and sweeps, for the competition version. In free and school combat, Kung Fu is expressed in all of its techniques',
@@ -23,8 +28,14 @@ const courses = [
 ];
 ---
 
-<section class="bg-gradient-to-r from-black">
-	<div class="container flex flex-col gap-4 py-4 md:flex-row lg:gap-8 lg:py-8">
-		{courses.map(({ title, icon, description }) => <CourseCard {title} {icon} {description} />)}
-	</div>
-</section>
+<Section>
+	<Container>
+		<div class="flex flex-col gap-4 py-4 md:flex-row lg:gap-8 lg:py-8">
+			{
+				courses.map(({ title, icon, slug, description }) => (
+					<CourseCard {title} {slug} {icon} {description} />
+				))
+			}
+		</div>
+	</Container>
+</Section>

@@ -31,7 +31,8 @@ const dateOptions: Intl.DateTimeFormatOptions = {
 	month: 'long',
 	day: 'numeric',
 };
-const dateISOString = new Date(entry.data.date).toLocaleDateString('fr-FR', dateOptions);
+// const dateISOString = new Date(entry.data.date).toLocaleDateString('fr-FR', dateOptions);
+const dateISOString = new Date(entry.data.date).toLocaleDateString('en-EN', dateOptions);
 
 // Get filename from cover property
 const coverName = entry.data.cover.src.split('.')[0].split('/').pop() || 'cover';

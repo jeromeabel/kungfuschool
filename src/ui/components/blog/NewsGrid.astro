@@ -1,14 +1,14 @@
 ---
 import { getCollection } from 'astro:content';
 
-import NewsCard from '@components/NewsCard.astro';
+import NewsCard from '@components/blog/NewsCard.astro';
 
 interface Props {
 	nb?: number;
 	cols?: number;
 	rounded?: boolean;
 }
-const { nb = 2, cols = 2, rounded } = Astro.props;
+const { nb = 2, cols = 2, rounded = true } = Astro.props;
 
 const news = (await getCollection('blog'))
 	.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())

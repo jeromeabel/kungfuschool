@@ -6,7 +6,7 @@ interface Props extends HTMLAttributes<'a'> {
 	css?: string;
 }
 
-const { href, label, css = 'border-white text-lg lg:text-xl', ...props } = Astro.props;
+const { href, label, css = 'border-white text-lg', ...props } = Astro.props;
 
 // Active Link
 const { pathname } = Astro.url;
@@ -15,10 +15,10 @@ const isActive = href === pathname || href === pathname.replace(/\/$/, '');
 
 <a
 	href={href}
-	class:list={[css, 'hover:border-b', { 'border-b': isActive }]}
+	class:list={[css, 'uppercase hover:border-b', { 'border-b': isActive }]}
 	{...props}
-	aria-label={`Ouvrir la page ${label}`}
-	title={`Ouvrir la page ${label}`}
+	aria-label={`Open the ${label} page`}
+	title={`Open the ${label} page`}
 >
 	{label}
 </a>

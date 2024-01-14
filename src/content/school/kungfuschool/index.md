@@ -15,7 +15,7 @@ infos:
   surface: 350
   studentsPerYear: 320
   medals: 32
-schedules: 'Lundi - vendredi 17h-22h'
+schedules: 'Monday - Friday 5 p.m. - 10 p.m.'
 socials:
   - label: 'Facebook'
     href: 'https://www.facebook.com/'
@@ -26,5 +26,5 @@ socials:
   - label: 'FaceEmailbook'
     href: 'mailto:contact@gmail.com'
     icon: 'ic:baseline-email'
-intro: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus assumenda deleniti itaque molestias odio quidem praesentium, numquam veniam animi ipsam velit iure atque delectus debitis quisquam tempore optio ea corrupti."
+intro: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus assumenda deleniti itaque molestias odio quidem praesentium, numquam veniam animi ipsam velit iure atque delectus debitis quisquam tempore optio ea corrupti.'
 ---

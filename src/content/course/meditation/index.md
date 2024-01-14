@@ -1,10 +1,10 @@
 ---
 order: 6
-title: 'Méditation'
+title: 'Meditation'
 type: 'yearly'
 description: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur'
 cover: './cover.jpg'
-illustration: 'medit'
+illustration: 'meditation'
 ---
 
 Lorem ipsum, dolor sit amet consectetur adipisicing elit. Inventore, maiores vero consequatur eos quia voluptatibus velit eius debitis. Facilis expedita quas impedit doloribus, eum veniam nam? Magnam provident numquam nesciunt?

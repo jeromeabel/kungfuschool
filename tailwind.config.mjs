@@ -19,6 +19,7 @@ export default {
 				padding: '2rem',
 			},
 			gridTemplateColumns: {
+				18: 'repeat(18, minmax(0, 1fr))',
 				22: 'repeat(22, minmax(0, 1fr))',
 				24: 'repeat(24, minmax(0, 1fr))',
 			},

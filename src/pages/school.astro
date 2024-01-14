@@ -9,10 +9,8 @@ import H2 from '@components/H2.astro';
 import Prose from '@components/Prose.astro';
 import Section from '@components/Section.astro';
 import Container from '@components/Container.astro';
-import SchoolInfos from '@components/SchoolInfos.astro';
+import SchoolInfos from '@components/school/SchoolInfos.astro';
 import SocialLinks from '@components/links/SocialLinks.astro';
-import CTALink from '@components/links/CTALink.astro';
-import NewsGridSummary from '@components/NewsGridSummary.astro';
 
 import PaternshipImg from '@assets/salute.png';
 
@@ -28,13 +26,14 @@ const linkPaternships = `${baseURL}/school/partenariats`;
 	<Container>
 		<Section>
 			<H1>The School</H1>
-			<p class="max-w-2xl pb-8 pt-8 lg:pb-16 lg:text-xl">{school.intro}</p>
+			<p class="max-w-2xl pb-8 pt-4 lg:pb-16 lg:text-xl">{school.intro}</p>
 			<Image src={school.cover} class="h-[300px] object-cover lg:h-[750px]" alt="Inside" />
 		</Section>
 
-		<Section id="infos">
+		<hr id="infos" class="mb-14 border-transparent" />
+		<Section>
 			<H2>Informations</H2>
-			<div class="flex flex-col gap-4 md:gap-8 lg:flex-row">
+			<div class="mt-8 flex flex-col gap-4 md:gap-8 lg:flex-row">
 				<a href={school.address.openstreetmap} title="Open the map" class="relative lg:w-2/3">
 					<Image src={school.address.imageMap} alt="School's map" class="h-full object-cover" />
 					<div
@@ -50,10 +49,11 @@ const linkPaternships = `${baseURL}/school/partenariats`;
 			</div>
 		</Section>
 
-		<Section id="about">
-			<H2>School's Story</H2>
+		<hr id="about" class="mb-14 border-transparent" />
+		<Section>
+			<H2>About</H2>
 
-			<div class="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-16">
+			<div class="grid grid-cols-1 gap-8 pt-8 lg:grid-cols-3 lg:gap-16">
 				<Prose>
 					<p>
 						Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti magni aspernatur,
@@ -83,7 +83,7 @@ const linkPaternships = `${baseURL}/school/partenariats`;
 
 		<Section>
 			<H2>Our Partners</H2>
-			<div class="mb-8 grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-16">
+			<div class="mb-8 mt-8 grid grid-cols-1 gap-8 lg:grid-cols-3 lg:gap-16">
 				<Prose>
 					<p>
 						Vitae, quod quis. Reiciendis, officiis! Natus blanditiis, saepe nobis excepturi soluta
