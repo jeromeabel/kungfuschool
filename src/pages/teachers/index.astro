@@ -22,10 +22,8 @@ const linkTeachers = `${baseURL}/teachers`;
 				blanditiis quod cumque. Inventore voluptates quos culpa obcaecati expedita ducimus, cumque
 				reiciendis facilis ea sunt optio adipisci.
 			</p>
-		</Section>
 
-		<Section>
-			<div class="flex flex-col justify-evenly gap-16 md:flex-row md:gap-8">
+			<div class="mt-8 flex flex-col justify-evenly gap-16 md:flex-row md:gap-8">
 				{
 					teachers.map(({ data, slug }) => (
 						<a
@@ -35,7 +33,7 @@ const linkTeachers = `${baseURL}/teachers`;
 							<Image
 								src={data.cover}
 								alt={`${data.first} ${data.last}'s portrait`}
-								class="aspect-square w-4/5 rounded-full bg-white object-cover p-1 md:w-full"
+								class="aspect-video bg-white object-cover p-1 md:w-full"
 							/>
 							<p class="text-lg font-bold md:text-2xl">
 								{data.first} {data.last}
