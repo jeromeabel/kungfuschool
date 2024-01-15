@@ -1,8 +1,8 @@
 ---
-title: "Sanda training"
-headline: "From January 8 to 9, 2024"
+title: "Trip to China"
+headline: "From July 8 to 28, 2023"
 cover: "./cover.jpg"
-date: 2023-01-04
+date: 2023-07-02
 description: Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus assumenda deleniti itaque molestias odio quidem praesentium, numquam veniam animi ipsam velit iure atque delectus debitis quisquam tempore optio ea corrupti.
 ---
 
