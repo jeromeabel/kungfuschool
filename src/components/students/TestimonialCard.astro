@@ -6,14 +6,14 @@ const { name, image, year, text } = Astro.props;
 
 <div class="flex flex-1 flex-col items-center justify-between gap-8 md:flex-row lg:flex-col">
 	<div class="h-36 w-36 min-w-36 overflow-hidden rounded-full">
-		<Image src={image} alt={`Portrait de ${name}`} width={400} class="object-cover" />
+		<Image src={image} alt={`${name}'s portrait`} width={400} class="object-cover" />
 	</div>
 	<blockquote class="max-w-md ps-8">
 		<svg
 			xmlns="http://www.w3.org/2000/svg"
 			viewBox="0 0 24 24"
 			fill="currentColor"
-			class="absolute h-6 w-6 -translate-x-8 -translate-y-4 text-gray-400"
+			class="absolute h-6 w-6 -translate-x-8 -translate-y-4 text-white"
 			aria-hidden="true"
 			><path
 				fill="currentColor"
@@ -23,6 +23,6 @@ const { name, image, year, text } = Astro.props;
 		<p class="text-lg">
 			{text}"
 		</p>
-		<p class="mt-2"><em>{name}</em>, {year}<sup>e</sup> année.</p>
+		<p class="mt-2"><em>{name}</em>, {year} year.</p>
 	</blockquote>
 </div>
