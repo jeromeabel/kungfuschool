@@ -1,10 +1,10 @@
 # Kung Fu School
 
-[![Astro](https://img.shields.io/badge/Astro-4.0-yellow)](https://astro.build/)
+[![Astro](https://img.shields.io/badge/Astro-4.1-yellow)](https://astro.build/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-blue)](https://tailwindcss.com/)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.4-blue)](https://tailwindcss.com/)
 
-I am developing a website for a Kung Fu school located in La Rochelle, France. The current website is outdated and does not reflect current best practices in web design.
+I am developing a website for a Kung Fu school in France. The current website is outdated and does not reflect current best practices in web design.
 
 My work involves designing and developing a complete redesign of the website, with a new design, to provide a quality user experience with the best performance. Additionally, the idea is to create a software solution that integrates other services such as content management, registration, and learning tracking.
 
@@ -70,4 +70,4 @@ Open the browser at the address: http://localhost:4321/kungfuschool
 
 ## 👤 Author
 
-[@jeromeabel](https://github.com/jeromeabel)
+- [@jeromeabel](https://github.com/jeromeabel)
