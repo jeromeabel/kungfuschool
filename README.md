@@ -4,23 +4,23 @@
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.2-blue)](https://www.typescriptlang.org/)
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-3.0-blue)](https://tailwindcss.com/)
 
-Je développe un site web pour une école de Kung Fu située à La Rochelle (France). Le site actuel est vieillissant, il ne reflète pas les bonnes pratiques actuelles en matière de conception de sites Web.
+I am developing a website for a Kung Fu school located in La Rochelle, France. The current website is outdated and does not reflect current best practices in web design.
 
-Mon travail consiste à concevoir et développer une refonte complète du site Web, avec un nouveau design, pour offrir une expérience utilisateur de qualité avec les meilleures performances. Dans un second temps, l'idée est de créer une solution logicielle qui intègre d'autres services comme la gestion du contenu, l'inscription et le suivi des apprentissages.
+My work involves designing and developing a complete redesign of the website, with a new design, to provide a quality user experience with the best performance. Additionally, the idea is to create a software solution that integrates other services such as content management, registration, and learning tracking.
 
-## ✨ Démo
+## ✨ Demo
 
 👉 https://jeromeabel.github.io/kungfuschool/
 
 ![Screenshot of the Website KungFuSchool](./screen.jpg)
 
-## 🚨 Pré-requis
+## 🚨 Prerequisites
 
-Vous aurez besoin de :
+You will need:
 
 - [NodeJS](https://nodejs.org/)
 - [Git](https://git-scm.com/)
-- Un terminal pour lancer des commandes
+- A terminal to run commands
 
 ## 🛠️ Installation
 
@@ -36,13 +36,37 @@ npm install
 npm run dev
 ```
 
-Ouvrir le navigateur à l'adresse: http://localhost:4321/kungfuschool
+Open the browser at the address: http://localhost:4321/kungfuschool
 
 ## 📝 Documentation
 
-- Maquette de la version 1 sur [Figma](https://www.figma.com/file/sW8NgzHukO70ZU6zs8l920/Kung-Fu-School?type=design&node-id=1-1843&mode=design)
-- Analyse et conception sur le [Wiki](https://github.com/jeromeabel/kungfuschool/wiki)
-- Gestion des tâches et user stories sur le [Kanban](https://github.com/users/jeromeabel/projects/5)
+- Version 1 mockup on [Figma](https://www.figma.com/file/sW8NgzHukO70ZU6zs8l920/Kung-Fu-School?type=design&node-id=1-1843&mode=design)
+- Analysis and design on the [Wiki](https://github.com/jeromeabel/kungfuschool/wiki)
+- Task management and user stories on the [Kanban](https://github.com/users/jeromeabel/projects/5)
+
+## Steps
+
+- [ ] **V1 - Visitor Experience Enhancement**:
+  - Responsive/consistency in design
+  - Improvement of SEO and performance (Lighthouse score)
+- [ ] **V2 - CMS for Admin**:
+  - Administrator autonomy in managing news and content
+- [ ] **V3 - Enhanced Registration Process**:
+  - Simplification of registration management for the administrator
+  - Improvement in communication with students (announcements, notifications)
+- [ ] **V4 - Online Store**:
+  - Facilitation of the payment process for students
+  - Increase in association revenue
+  - Diversification of products, showcasing an expanded view of Chinese martial arts culture
+  - Student loyalty through exclusive products and promotions
+  - Facilitation of student support through donations
+- [ ] **V5 - Learning Platform**:
+  - Improvement in the learning experience (tracking, content)
+  - Implementation of a system to collect and display testimonials
+  - Mobile app version for students
+- [ ] **V6 - SaaS**:
+  - Introduction of a software solution as a service (SaaS)
+  - Addressing the administrative needs of any sports school
 
 ## 👤 Author
 
