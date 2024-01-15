@@ -9,17 +9,17 @@ palmares: ./taichi.jpg
 description: Porro quos modi perspiciatis voluptates itaque quis earum. Velit quisquam est iusto, cumque error sunt unde consectetur corrupti maxime laudantium omnis, ab sit tempore quibusdam! Laborum, similique? Sunt, deleniti quo!
 year: 2010
 diploma_text:
-  - Diplômé d’état BEES1 – 5ème Duan (France)
-  - Diplôme Master en Kung fu (Chine)
+  - BEES1 state diploma – 5th Duan (France)
+  - Master's degree in Kung fu (China)
 palmares_text:
-  - CHAMPIONNAT DU MONDE, IWUF:
-      - '2022 : Championne du monde en Taï Chi, vice-championne du monde en Kung Fu'
-      - '2020 : Double vice championne du monde en Kung fu et Taïji'
-      - '2016 : Vice-championne du monde en Kung Fu, 2ème en Taï Chi équipe'
+  - WORLD CHAMPIONSHIP, IWUF:
+      - '2022: World champion in Tai Chi, vice-world champion in Kung Fu'
+      - '2020: Double vice world champion in Kung fu and Taiji'
+      - '2016: Vice-world champion in Kung Fu, 2nd in Tai Chi team'
   - INTERNATIONAL SHAOLIN, CWA:
-      - '2021 : 1 médaille d’or en Kung Fu, 1 médaille d’argent en Taï Chi'
-      - '2019 : Triple médailles d argent en Kung Fu / Taï Chi / Taï Chi équipe'
-      - '2017 : 1 médaille d’or en Kung Fu'
+      - '2021: 1 gold medal in Kung Fu, 1 silver medal in Tai Chi'
+      - '2019: Triple silver medals in Kung Fu / Taï Chi / Taï Chi team'
+      - '2017: 1 gold medal in Kung Fu'
 images:
   - './collier.jpg'
   - './meditation.jpg'
@@ -27,4 +27,4 @@ images:
 ---
 
 Error facere quae dolore sit quos sequi cumque quam odio aperiam quaerat similique voluptas saepe fugiat commodi expedita quisquam modi numquam, repudiandae earum ut sed at! Voluptatem saepe perferendis laudantium.
-Aperiam repudiandae, error quia eaque adipisci perferendis doloremque iste suscipit, repellendus quis, dignissimos dolorum laudantium dolores voluptatibus dolor. Voluptatem debitis vero culpa ratione quibusdam est possimus corporis officiis saepe autem!
+Aperiam repudiandae, error quia eaque adipisci perferendis doloremque iste suscipit, repellendus quis.

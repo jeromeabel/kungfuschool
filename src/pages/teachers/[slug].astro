@@ -37,11 +37,11 @@ const name = `${entry.data.first} ${entry.data.last}`;
 					</div>
 					<div class="flex items-center gap-3">
 						<Icon name="MaterialSymbolsCalendarMonthRounded" class="h-8" />
-						Pratique le Kung-Fu depuis {entry.data.year}
+						Practiced Kung Fu since {entry.data.year}
 					</div>
 				</div>
 				<div class="flex-1">
-					<Image src={entry.data.cover} alt={`Portrait de ${name}`} loading="eager" />
+					<Image src={entry.data.cover} alt={`${name}'s portrait`} loading="eager" />
 				</div>
 			</div>
 		</Section>
@@ -50,7 +50,7 @@ const name = `${entry.data.first} ${entry.data.last}`;
 				<div class="flex-1">
 					<div class="flex items-center gap-3">
 						<Icon name="vaadin_diploma" class="h-8" />
-						<span class="font-semibold uppercase">Diplômes</span>
+						<span class="font-semibold uppercase">Diplomas</span>
 					</div>
 					<ul class="ms-10 mt-4 list-inside list-disc">
 						{entry.data.diploma_text.map((item) => <li>{item}</li>)}
@@ -58,7 +58,7 @@ const name = `${entry.data.first} ${entry.data.last}`;
 				</div>
 
 				<div class="flex-1">
-					<Image src={entry.data.diploma} alt={`Diplôme de ${name}`} class="w-auto" />
+					<Image src={entry.data.diploma} alt={`${name}'s diplomas`} class="w-auto" />
 				</div>
 			</div>
 		</Section>
@@ -68,7 +68,7 @@ const name = `${entry.data.first} ${entry.data.last}`;
 				<div class="flex-1">
 					<div class="flex items-center gap-3">
 						<Icon name="emojione-monotone_sports-medal" class="h-8" />
-						<span class="font-semibold uppercase">Palmarès</span>
+						<span class="font-semibold uppercase">Prize list</span>
 					</div>
 					<ul class="ms-10 mt-4">
 						{
@@ -87,7 +87,7 @@ const name = `${entry.data.first} ${entry.data.last}`;
 				</div>
 
 				<div class="flex-1">
-					<Image src={entry.data.palmares} alt={`Compétition de ${name}`} class="w-auto" />
+					<Image src={entry.data.palmares} alt={`${name}'s competitions`} class="w-auto" />
 				</div>
 			</div>
 		</Section>

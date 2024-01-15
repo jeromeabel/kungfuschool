@@ -9,17 +9,17 @@ palmares: ./medaille.jpg
 description: Shifu Lee, maître depuis 2002 et pratiquant le style Shaolin nan de la boxe des dix animaux depuis 1975
 year: 1975
 diploma_text:
-  - Diplômé d’état BEES1 – 5ème Duan (France)
-  - Diplôme Master en Kung fu (Chine)
+  - BEES1 state diploma – 5th Duan (France)
+  - Master's degree in Kung fu (China)
 palmares_text:
-  - CHAMPIONNAT DU MONDE, IWUF:
-      - '2022 : Vice-champion du monde en Kung Fu'
-      - '2020 : Vice-champion du monde en Kung Fu'
-      - '2018 : Médaille de bronze en Kung Fu'
+  - WORLD CHAMPIONSHIP, IWUF:
+      - '2022: World champion in Tai Chi, vice-world champion in Kung Fu'
+      - '2020: Double vice world champion in Kung fu and Taiji'
+      - '2016: Vice-world champion in Kung Fu, 2nd in Tai Chi team'
   - INTERNATIONAL SHAOLIN, CWA:
-      - '2021 : Double champion du monde en Kung Fu, 2 médailles d’argent en Taï Chi'
-      - '2019 : Médaille d’or en Kung Fu'
-      - '2015 : Médaille d’or en Kung Fu, vice-champion du monde en Taï Chi équipe'
+      - '2021: 1 gold medal in Kung Fu, 1 silver medal in Tai Chi'
+      - '2019: Triple silver medals in Kung Fu / Taï Chi / Taï Chi team'
+      - '2017: 1 gold medal in Kung Fu'
 images:
   - './dragon.jpg'
   - './taichi.jpg'
