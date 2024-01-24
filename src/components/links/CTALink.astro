@@ -1,5 +1,4 @@
 ---
-
 import { Icon } from 'astro-icon/components';
 
 interface Props {
@@ -8,9 +7,19 @@ interface Props {
 	outline?: boolean;
 	rounded?: boolean;
 	icon?: string;
+	size?: string;
+	iconSize?: number;
 }
 
-const { label, href, outline = false, rounded = false, icon } = Astro.props;
+const {
+	label,
+	href,
+	outline = false,
+	rounded = false,
+	icon,
+	size = 'px-2 py-1 text-base md:px-4 md:py-2',
+	iconSize = 24,
+} = Astro.props;
 
 const cssOutline = outline
 	? 'bg-black bg-opacity-50 text-white hover:bg-white hover:text-black'
@@ -21,12 +30,12 @@ const cssOutline = outline
 	class:list={[
 		{ 'rounded-full': rounded },
 		{ 'flex items-center gap-2': icon },
-		`w-fit whitespace-nowrap border border-white px-2 py-1 text-base transition-all md:px-4 md:py-2 ${cssOutline}`,
+		`w-fit whitespace-nowrap border border-white transition-all ${size} ${cssOutline}`,
 	]}
 	href={href}
 	aria-label={label}
 	title={label}
 >
 	{label}
-	{icon ? <Icon size={24} name={icon} class="" /> : null}
+	{icon ? <Icon size={iconSize} name={icon} /> : null}
 </a>
