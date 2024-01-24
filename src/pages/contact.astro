@@ -1,0 +1,25 @@
+---
+import Layout from '@layouts/Layout.astro';
+import H1 from '@components/H1.astro';
+import Section from '@components/Section.astro';
+import Container from '@components/Container.astro';
+import ContactForm from '@components/ContactForm.astro';
+---
+
+<Layout title="Contact">
+	<Container>
+		<Section>
+			<H1>Contact</H1>
+
+			<p class="max-w-2xl pb-8 pt-4 lg:pb-16 lg:text-xl">
+				Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis ratione fuga ab saepe
+				corporis hic aperiam, non, qui exercitationem provident vero eaque, iure rem accusamus! Sint
+				quae numquam dolore impedit. Est, assumenda! Deserunt quidem ab minima pariatur, nostrum ea
+				nobis explicabo in, commodi rem molestiae autem quasi, doloremque tenetur dolore sed porro
+				facilis. Ad placeat iure asperiores earum deserunt. Architecto!
+			</p>
+
+			<ContactForm />
+		</Section>
+	</Container>
+</Layout>

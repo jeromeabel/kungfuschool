@@ -1,0 +1,24 @@
+---
+
+---
+
+<form class="flex max-w-2xl flex-col gap-4">
+	<div class="flex gap-4">
+		<div class="flex flex-1 flex-col gap-1">
+			<label for="name" class="font-bold"> Name</label>
+			<input type="text" id="name" name="name" class="rounded-md border px-3 py-2" required />
+		</div>
+		<div class="flex flex-1 flex-col gap-1">
+			<label for="email" class="font-bold"> Email</label>
+			<input type="email" id="email" name="email" class="rounded-md border px-3 py-2" required />
+		</div>
+	</div>
+	<div class="">
+		<label for="message" class="mb-2 block font-bold"> Message</label>
+		<textarea id="message" name="message" rows={4} class="w-full rounded-md border px-3 py-2"
+		></textarea>
+	</div>
+	<button type="submit" class="max-w-fit rounded-md bg-gray-500 px-4 py-2" disabled>
+		Send a message (not yet implemented)
+	</button>
+</form>
