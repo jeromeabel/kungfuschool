@@ -19,7 +19,7 @@ interface Props {
 const { title, description, publishedDate, image } = Astro.props;
 
 const baseURL = import.meta.env.BASE_URL;
-const fontwoff = `${baseURL}/fonts/houji.woff`;
+//const fontwoff = `${baseURL}/fonts/houji.woff`;
 const fontwoff2 = `${baseURL}/fonts/houji.woff2`;
 const sitemap = `${baseURL}/sitemap-index.xml`;
 ---
@@ -36,11 +36,11 @@ const sitemap = `${baseURL}/sitemap-index.xml`;
 			<slot />
 		</main>
 		<Footer />
-		<style is:global define:vars={{ fontwoff, fontwoff2 }}>
+		<style is:global>
 			@font-face {
 				font-family: 'Houji';
 				src:
-				    url('/kungfuschool/fonts/houji.woff2') format('woff2'),
+					url('/kungfuschool/fonts/houji.woff2') format('woff2'),
 					url('/kungfuschool/fonts/houji.woff2') format('woff');
 				font-weight: normal;
 				font-style: normal;
