@@ -36,7 +36,7 @@ import { pricesCardsSingle, pricesCardsYearly } from '@assets/data/prices';
 		<Separator id="prices" />
 		<Section>
 			<H2>Pricing <span class="text-2xl font-normal">/ membership</span></H2>
-			<div class="grid grid-cols-1 items-end gap-8 py-8 md:grid-cols-3">
+			<div class="grid grid-cols-1 gap-8 py-8 md:grid-cols-3">
 				{pricesCardsYearly.map((card, index) => <PriceCard {card} {index} />)}
 			</div>
 		</Section>
