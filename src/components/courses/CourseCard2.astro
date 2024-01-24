@@ -13,10 +13,12 @@ const linkCourse = `${baseURL}/courses/${course.slug}`;
 ---
 
 <a
-	class="flex flex-1 flex-col gap-6 border border-white bg-black p-4 text-white hover:bg-white hover:text-black lg:gap-8 lg:p-8"
+	class="group flex flex-1 flex-col gap-6 border border-white bg-black p-4 text-white hover:bg-white hover:text-black lg:gap-8 lg:p-8"
 	href={linkCourse}
 >
-	<div class="h-56">
+	<div
+		class="h-56 drop-shadow-[0_35px_35px_rgba(255,255,255,0.25)] group-hover:drop-shadow-[0_35px_35px_rgba(0,0,0,0.40)]"
+	>
 		<Icon name={course.data.illustration} class="h-full w-full" />
 	</div>
 	<h2 class="text-center text-2xl uppercase lg:text-4xl">{course.data.title}</h2>
