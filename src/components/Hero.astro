@@ -1,5 +1,5 @@
 ---
-import { Image } from 'astro:assets';
+import { Image, Picture } from 'astro:assets';
 
 import CTALink from '@components/links/CTALink.astro';
 import Container from '@components/Container.astro';
@@ -37,11 +37,14 @@ const coursesLink = `${baseURL}/courses`;
 			</div>
 		</Container>
 	</div>
-	<Image
+
+	<Picture
 		src={heroImg}
+		formats={['avif', 'webp']}
+		densities={[1.5, 2]}
 		alt=""
 		class="absolute inset-0 -z-10 h-full w-full object-cover"
-		loading="lazy"
+		loading="eager"
 		aria-hidden="true"
 	/>
 </section>
