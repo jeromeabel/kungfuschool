@@ -44,11 +44,11 @@ Open the browser at the address: http://localhost:4321/kungfuschool
 - Analysis and design on the [Wiki](https://github.com/jeromeabel/kungfuschool/wiki)
 - Task management and user stories on the [Kanban](https://github.com/users/jeromeabel/projects/5)
 
-## Steps
+## 📅 Plan
 
-- [ ] **V1 - Visitor Experience Enhancement**:
+- [x] **V1 - Visitor Experience Enhancement**:
   - Responsive/consistency in design
-  - Improvement of SEO and performance (Lighthouse score)
+  - Improvement of SEO and performance
 - [ ] **V2 - CMS for Admin**:
   - Administrator autonomy in managing news and content
 - [ ] **V3 - Enhanced Registration Process**:
@@ -68,6 +68,29 @@ Open the browser at the address: http://localhost:4321/kungfuschool
   - Introduction of a software solution as a service (SaaS)
   - Addressing the administrative needs of any sports school
 
+## 🎉 Results
+
+![Screenshot of Pagespeed scores](./pagespeed.png)
+
+### UX
+
+- Clear user journey: informations, navigation, consistency
+- Support for small screens: responsive design
+- Engagment: social links, share blog posts, animations, Call to Action
+- Quality (Pagespeed scores):
+  - Old score: 82% 82% 68% 69%
+  - New scores: 99% 100% 100% 100% (mobile) - 100% 100% 100% 100% (desktop)
+
+### DX
+
+- Documentation
+- Mockup and mini design system
+- Development workflow: user stories, git actions, conventional git commits
+
 ## 👤 Author
 
 - [@jeromeabel](https://github.com/jeromeabel)
+
+## 📷 Images Credits
+
+AI generated, iconsjs.org, iwuf.org, freepik.com
