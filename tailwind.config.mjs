@@ -26,8 +26,13 @@ export default {
 			animation: {
 				openmenu: 'openmenu 0.5s ease-in both',
 				closemenu: 'closemenu 0.5s ease-in both',
+				slideleft: 'slideleft 2s both',
 			},
 			keyframes: {
+				slideleft: {
+					'0%': { transform: 'translateX(200px)', opacity: 0 },
+					'100%': { transform: 'translateX(0)', opacity: 1 },
+				},
 				openmenu: {
 					'0%': { top: '-400px' },
 					'100%': { top: '0px' },

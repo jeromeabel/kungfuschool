@@ -39,7 +39,10 @@ const subscribeLink = `${baseURL}/contact`;
 					</div>
 					<CTALink href={subscribeLink} label="Register" />
 				</div>
-				<Icon name={entry.data.illustration} class="mt-8 h-full max-h-[400px] flex-1" />
+				<Icon
+					name={entry.data.illustration}
+					class="animate-slideleft mt-8 h-full max-h-[200px] min-h-[200px] w-full flex-1 lg:max-h-[400px]"
+				/>
 			</div>
 		</Section>
 		<Image src={entry.data.cover} alt={entry.data.title} class="mb-24 w-full" loading="eager" />
